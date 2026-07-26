@@ -430,7 +430,7 @@ def evaluate(policy, frozen, with_experience, replicate):
         guide = experience_guide(frozen, game, True) if with_experience else None
         for seed in CONFIG["eval_seeds"]:
             obs, infos = env.reset(
-                seed=seed, gameFold="test", generateGoldPath=False
+                seed=seed, gameFold=CONFIG["eval_fold"], generateGoldPath=False
             )
             history, total = [], 0.0
             for _ in range(CONFIG["max_steps"]):
