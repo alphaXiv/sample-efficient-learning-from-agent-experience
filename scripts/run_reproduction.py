@@ -42,7 +42,9 @@ def load_env(game: str):
     from textworld_express import TextWorldExpressEnv
 
     env = TextWorldExpressEnv(envStepLimit=CONFIG["max_steps"])
-    env.load(gameName=game, gameParams=CONFIG["games"][game])
+    # textworld-express 1.0.0 exposes load's arguments positionally even
+    # though its README shows keyword use.
+    env.load(game, CONFIG["games"][game])
     return env
 
 
