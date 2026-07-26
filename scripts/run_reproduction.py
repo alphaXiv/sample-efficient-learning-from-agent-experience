@@ -118,7 +118,7 @@ def collect_frozen() -> dict:
             )
         env.close()
     frozen = {
-        "benchmark": "TextWorldExpress 1.0.0",
+        "benchmark": "TextWorldExpress 1.1.0",
         "fold": "train",
         "games": CONFIG["games"],
         "train_seeds": CONFIG["train_seeds"],
