@@ -25,6 +25,7 @@ We substituted Apache-2.0 [TextWorldExpress](https://github.com/cognitiveailab/T
 | [No-experience teacher](https://github.com/alphaXiv/sample-efficient-learning-from-agent-experience/tree/orx/no-experience-teacher-ablation) | Remove privileged experience from teacher | `bash scripts/run.sh` | 7.03 score; experience-derived gain erased | 4 GPUs, 1m23s |
 | [Lower-LR direct SFT](https://github.com/alphaXiv/sample-efficient-learning-from-agent-experience/tree/orx/direct-sft-lower-learning-rate) | Halve adapter learning rate | `bash scripts/run.sh` | 45.57; ordering remained direct > distillation | 4 GPUs, 1m18s |
 | [Lower-LR unpacked distillation](https://github.com/alphaXiv/sample-efficient-learning-from-agent-experience/tree/orx/unpacked-epd-lower-learning-rate) | Halve adapter learning rate | `bash scripts/run.sh` | 40.89; ordering remained direct > distillation | 4 GPUs, 1m23s |
+| [Full-mapping unpacked distillation](https://github.com/alphaXiv/sample-efficient-learning-from-agent-experience/tree/orx/unpacked-epd-full-successful-mappings) | Expose more successful mappings in the teacher context | `bash scripts/run.sh` | 43.75; improved EPD but remained below direct SFT | 4 GPUs, 1m23s |
 
 ## Re-run
 
