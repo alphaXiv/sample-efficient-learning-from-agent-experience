@@ -5,5 +5,5 @@ numpy==2.1.2
 pandas==2.2.3
 peft==0.15.2
 pyarrow==20.0.0
-textworld-express==1.0.0
+textworld-express==1.1.0
 transformers==4.51.3
