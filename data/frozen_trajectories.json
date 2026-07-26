@@ -1,0 +1,3398 @@
+{
+  "benchmark": "TextWorldExpress 1.1.0",
+  "fold": "train",
+  "games": {
+    "coin": "numLocations=5,numDistractorItems=0,includeDoors=0,limitInventorySize=0",
+    "mapreader": "numLocations=5,maxDistanceApart=2,maxDistractorItemsPerLocation=0,includeDoors=0,limitInventorySize=0",
+    "twc": "numLocations=1,numItemsToPutAway=2,includeDoors=0,limitInventorySize=0"
+  },
+  "train_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "episodes": [
+    {
+      "game": "coin",
+      "seed": 0,
+      "objective": "Explore the rooms and take the coin.",
+      "failed": {
+        "score": 1.0,
+        "steps": [
+          {
+            "observation": "You are in the kitchen. In one part of the room you see a stove. There is also an oven. You also see a fridge that is closed. In another part of the room you see a counter, that has nothing on it. In one part of the room you see a kitchen cupboard that is closed. There is also a cutlery drawer that is closed. You also see a trash can that is closed. In another part of the room you see a dishwasher that is closed. In one part of the room you see a dining chair, that has nothing on it. \nTo the North you see the pantry. To the South you see the backyard. To the West you see the corridor. ",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move north",
+              "move south",
+              "move west"
+            ],
+            "action": "move west",
+            "reward": 0.0,
+            "next_observation": "You are in the corridor. In one part of the room you see a key holder, that has nothing on it. There is also a shoe cabinet that is closed. You also see a umbrella stand, that has nothing on it. In another part of the room you see a hat rack, that has nothing on it. In one part of the room you see a coat hanger, that has nothing on it. There is also a coin. \nTo the East you see the kitchen. To the West you see the bedroom. ",
+            "done": false
+          },
+          {
+            "observation": "You are in the corridor. In one part of the room you see a key holder, that has nothing on it. There is also a shoe cabinet that is closed. You also see a umbrella stand, that has nothing on it. In another part of the room you see a hat rack, that has nothing on it. In one part of the room you see a coat hanger, that has nothing on it. There is also a coin. \nTo the East you see the kitchen. To the West you see the bedroom. ",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move east",
+              "move west",
+              "take coin"
+            ],
+            "action": "take coin",
+            "reward": 1.0,
+            "next_observation": "You take the coin.",
+            "done": true
+          }
+        ]
+      },
+      "successful": {
+        "score": 1.0,
+        "steps": [
+          {
+            "observation": "You are in the kitchen. In one part of the room you see a stove. There is also an oven. You also see a fridge that is closed. In another part of the room you see a counter, that has nothing on it. In one part of the room you see a kitchen cupboard that is closed. There is also a cutlery drawer that is closed. You also see a trash can that is closed. In another part of the room you see a dishwasher that is closed. In one part of the room you see a dining chair, that has nothing on it. \nTo the North you see the pantry. To the South you see the backyard. To the West you see the corridor. ",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move north",
+              "move south",
+              "move west"
+            ],
+            "action": "look around",
+            "reward": 0.0,
+            "next_observation": "You are in the kitchen. In one part of the room you see a stove. There is also an oven. You also see a fridge that is closed. In another part of the room you see a counter, that has nothing on it. In one part of the room you see a kitchen cupboard that is closed. There is also a cutlery drawer that is closed. You also see a trash can that is closed. In another part of the room you see a dishwasher that is closed. In one part of the room you see a dining chair, that has nothing on it. \nTo the North you see the pantry. To the South you see the backyard. To the West you see the corridor. ",
+            "done": false
+          },
+          {
+            "observation": "You are in the kitchen. In one part of the room you see a stove. There is also an oven. You also see a fridge that is closed. In another part of the room you see a counter, that has nothing on it. In one part of the room you see a kitchen cupboard that is closed. There is also a cutlery drawer that is closed. You also see a trash can that is closed. In another part of the room you see a dishwasher that is closed. In one part of the room you see a dining chair, that has nothing on it. \nTo the North you see the pantry. To the South you see the backyard. To the West you see the corridor. ",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move north",
+              "move south",
+              "move west"
+            ],
+            "action": "move west",
+            "reward": 0.0,
+            "next_observation": "You are in the corridor. In one part of the room you see a key holder, that has nothing on it. There is also a shoe cabinet that is closed. You also see a umbrella stand, that has nothing on it. In another part of the room you see a hat rack, that has nothing on it. In one part of the room you see a coat hanger, that has nothing on it. There is also a coin. \nTo the East you see the kitchen. To the West you see the bedroom. ",
+            "done": false
+          },
+          {
+            "observation": "You are in the corridor. In one part of the room you see a key holder, that has nothing on it. There is also a shoe cabinet that is closed. You also see a umbrella stand, that has nothing on it. In another part of the room you see a hat rack, that has nothing on it. In one part of the room you see a coat hanger, that has nothing on it. There is also a coin. \nTo the East you see the kitchen. To the West you see the bedroom. ",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move east",
+              "move west",
+              "take coin"
+            ],
+            "action": "take coin",
+            "reward": 1.0,
+            "next_observation": "You take the coin.",
+            "done": true
+          }
+        ]
+      }
+    },
+    {
+      "game": "coin",
+      "seed": 1,
+      "objective": "Explore the rooms and take the coin.",
+      "failed": {
+        "score": 0.0,
+        "steps": [
+          {
+            "observation": "You are in the kitchen. In one part of the room you see a stove. There is also an oven. You also see a fridge that is closed. In another part of the room you see a counter, that has nothing on it. In one part of the room you see a kitchen cupboard that is closed. There is also a cutlery drawer that is closed. You also see a trash can that is closed. In another part of the room you see a dishwasher that is closed. In one part of the room you see a dining chair, that has nothing on it. There is also a coin. \nTo the South you see the pantry. To the West you see the backyard. ",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move south",
+              "move west",
+              "take coin"
+            ],
+            "action": "move west",
+            "reward": 0.0,
+            "next_observation": "You are in the backyard. In one part of the room you see a barbeque. There is also a workbench, that has nothing on it. You also see a patio chair, that has nothing on it. In another part of the room you see a patio table, that has nothing on it. In one part of the room you see a clothes line, that has nothing on it. There is also a garden, that has nothing on it. \nTo the North you see the corridor. To the East you see the kitchen. ",
+            "done": false
+          },
+          {
+            "observation": "You are in the backyard. In one part of the room you see a barbeque. There is also a workbench, that has nothing on it. You also see a patio chair, that has nothing on it. In another part of the room you see a patio table, that has nothing on it. In one part of the room you see a clothes line, that has nothing on it. There is also a garden, that has nothing on it. \nTo the North you see the corridor. To the East you see the kitchen. ",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move east",
+              "move north"
+            ],
+            "action": "move east",
+            "reward": 0.0,
+            "next_observation": "You are in the kitchen. In one part of the room you see a stove. There is also an oven. You also see a fridge that is closed. In another part of the room you see a counter, that has nothing on it. In one part of the room you see a kitchen cupboard that is closed. There is also a cutlery drawer that is closed. You also see a trash can that is closed. In another part of the room you see a dishwasher that is closed. In one part of the room you see a dining chair, that has nothing on it. There is also a coin. \nTo the South you see the pantry. To the West you see the backyard. ",
+            "done": false
+          },
+          {
+            "observation": "You are in the kitchen. In one part of the room you see a stove. There is also an oven. You also see a fridge that is closed. In another part of the room you see a counter, that has nothing on it. In one part of the room you see a kitchen cupboard that is closed. There is also a cutlery drawer that is closed. You also see a trash can that is closed. In another part of the room you see a dishwasher that is closed. In one part of the room you see a dining chair, that has nothing on it. There is also a coin. \nTo the South you see the pantry. To the West you see the backyard. ",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move south",
+              "move west",
+              "take coin"
+            ],
+            "action": "move south",
+            "reward": 0.0,
+            "next_observation": "You are in the pantry. In one part of the room you see a folding chair, that has nothing on it. There is also a shelf, that has nothing on it. \nTo the North you see the kitchen. ",
+            "done": false
+          }
+        ]
+      },
+      "successful": {
+        "score": 1.0,
+        "steps": [
+          {
+            "observation": "You are in the kitchen. In one part of the room you see a stove. There is also an oven. You also see a fridge that is closed. In another part of the room you see a counter, that has nothing on it. In one part of the room you see a kitchen cupboard that is closed. There is also a cutlery drawer that is closed. You also see a trash can that is closed. In another part of the room you see a dishwasher that is closed. In one part of the room you see a dining chair, that has nothing on it. There is also a coin. \nTo the South you see the pantry. To the West you see the backyard. ",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move south",
+              "move west",
+              "take coin"
+            ],
+            "action": "look around",
+            "reward": 0.0,
+            "next_observation": "You are in the kitchen. In one part of the room you see a stove. There is also an oven. You also see a fridge that is closed. In another part of the room you see a counter, that has nothing on it. In one part of the room you see a kitchen cupboard that is closed. There is also a cutlery drawer that is closed. You also see a trash can that is closed. In another part of the room you see a dishwasher that is closed. In one part of the room you see a dining chair, that has nothing on it. There is also a coin. \nTo the South you see the pantry. To the West you see the backyard. ",
+            "done": false
+          },
+          {
+            "observation": "You are in the kitchen. In one part of the room you see a stove. There is also an oven. You also see a fridge that is closed. In another part of the room you see a counter, that has nothing on it. In one part of the room you see a kitchen cupboard that is closed. There is also a cutlery drawer that is closed. You also see a trash can that is closed. In another part of the room you see a dishwasher that is closed. In one part of the room you see a dining chair, that has nothing on it. There is also a coin. \nTo the South you see the pantry. To the West you see the backyard. ",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move south",
+              "move west",
+              "take coin"
+            ],
+            "action": "take coin",
+            "reward": 1.0,
+            "next_observation": "You take the coin.",
+            "done": true
+          }
+        ]
+      }
+    },
+    {
+      "game": "coin",
+      "seed": 2,
+      "objective": "Explore the rooms and take the coin.",
+      "failed": {
+        "score": 1.0,
+        "steps": [
+          {
+            "observation": "You are in the kitchen. In one part of the room you see a stove. There is also an oven. You also see a fridge that is closed. In another part of the room you see a counter, that has nothing on it. In one part of the room you see a kitchen cupboard that is closed. There is also a cutlery drawer that is closed. You also see a trash can that is closed. In another part of the room you see a dishwasher that is closed. In one part of the room you see a dining chair, that has nothing on it. \nTo the North you see the pantry. To the East you see the backyard. ",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move east",
+              "move north"
+            ],
+            "action": "move north",
+            "reward": 0.0,
+            "next_observation": "You are in the pantry. In one part of the room you see a folding chair, that has nothing on it. There is also a shelf, that has nothing on it. \nTo the South you see the kitchen. ",
+            "done": false
+          },
+          {
+            "observation": "You are in the pantry. In one part of the room you see a folding chair, that has nothing on it. There is also a shelf, that has nothing on it. \nTo the South you see the kitchen. ",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move south"
+            ],
+            "action": "move south",
+            "reward": 0.0,
+            "next_observation": "You are in the kitchen. In one part of the room you see a stove. There is also an oven. You also see a fridge that is closed. In another part of the room you see a counter, that has nothing on it. In one part of the room you see a kitchen cupboard that is closed. There is also a cutlery drawer that is closed. You also see a trash can that is closed. In another part of the room you see a dishwasher that is closed. In one part of the room you see a dining chair, that has nothing on it. \nTo the North you see the pantry. To the East you see the backyard. ",
+            "done": false
+          },
+          {
+            "observation": "You are in the kitchen. In one part of the room you see a stove. There is also an oven. You also see a fridge that is closed. In another part of the room you see a counter, that has nothing on it. In one part of the room you see a kitchen cupboard that is closed. There is also a cutlery drawer that is closed. You also see a trash can that is closed. In another part of the room you see a dishwasher that is closed. In one part of the room you see a dining chair, that has nothing on it. \nTo the North you see the pantry. To the East you see the backyard. ",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move east",
+              "move north"
+            ],
+            "action": "move east",
+            "reward": 0.0,
+            "next_observation": "You are in the backyard. In one part of the room you see a barbeque. There is also a workbench, that has nothing on it. You also see a patio chair, that has nothing on it. In another part of the room you see a patio table, that has nothing on it. In one part of the room you see a clothes line, that has nothing on it. There is also a garden, that has nothing on it. \nTo the South you see the corridor. To the West you see the kitchen. ",
+            "done": false
+          },
+          {
+            "observation": "You are in the backyard. In one part of the room you see a barbeque. There is also a workbench, that has nothing on it. You also see a patio chair, that has nothing on it. In another part of the room you see a patio table, that has nothing on it. In one part of the room you see a clothes line, that has nothing on it. There is also a garden, that has nothing on it. \nTo the South you see the corridor. To the West you see the kitchen. ",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move south",
+              "move west"
+            ],
+            "action": "move south",
+            "reward": 0.0,
+            "next_observation": "You are in the corridor. In one part of the room you see a key holder, that has nothing on it. There is also a shoe cabinet that is closed. You also see a umbrella stand, that has nothing on it. In another part of the room you see a hat rack, that has nothing on it. In one part of the room you see a coat hanger, that has nothing on it. There is also a coin. \nTo the North you see the backyard. To the West you see the bedroom. ",
+            "done": false
+          },
+          {
+            "observation": "You are in the corridor. In one part of the room you see a key holder, that has nothing on it. There is also a shoe cabinet that is closed. You also see a umbrella stand, that has nothing on it. In another part of the room you see a hat rack, that has nothing on it. In one part of the room you see a coat hanger, that has nothing on it. There is also a coin. \nTo the North you see the backyard. To the West you see the bedroom. ",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move north",
+              "move west",
+              "take coin"
+            ],
+            "action": "take coin",
+            "reward": 1.0,
+            "next_observation": "You take the coin.",
+            "done": true
+          }
+        ]
+      },
+      "successful": {
+        "score": 1.0,
+        "steps": [
+          {
+            "observation": "You are in the kitchen. In one part of the room you see a stove. There is also an oven. You also see a fridge that is closed. In another part of the room you see a counter, that has nothing on it. In one part of the room you see a kitchen cupboard that is closed. There is also a cutlery drawer that is closed. You also see a trash can that is closed. In another part of the room you see a dishwasher that is closed. In one part of the room you see a dining chair, that has nothing on it. \nTo the North you see the pantry. To the East you see the backyard. ",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move east",
+              "move north"
+            ],
+            "action": "look around",
+            "reward": 0.0,
+            "next_observation": "You are in the kitchen. In one part of the room you see a stove. There is also an oven. You also see a fridge that is closed. In another part of the room you see a counter, that has nothing on it. In one part of the room you see a kitchen cupboard that is closed. There is also a cutlery drawer that is closed. You also see a trash can that is closed. In another part of the room you see a dishwasher that is closed. In one part of the room you see a dining chair, that has nothing on it. \nTo the North you see the pantry. To the East you see the backyard. ",
+            "done": false
+          },
+          {
+            "observation": "You are in the kitchen. In one part of the room you see a stove. There is also an oven. You also see a fridge that is closed. In another part of the room you see a counter, that has nothing on it. In one part of the room you see a kitchen cupboard that is closed. There is also a cutlery drawer that is closed. You also see a trash can that is closed. In another part of the room you see a dishwasher that is closed. In one part of the room you see a dining chair, that has nothing on it. \nTo the North you see the pantry. To the East you see the backyard. ",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move east",
+              "move north"
+            ],
+            "action": "move north",
+            "reward": 0.0,
+            "next_observation": "You are in the pantry. In one part of the room you see a folding chair, that has nothing on it. There is also a shelf, that has nothing on it. \nTo the South you see the kitchen. ",
+            "done": false
+          },
+          {
+            "observation": "You are in the pantry. In one part of the room you see a folding chair, that has nothing on it. There is also a shelf, that has nothing on it. \nTo the South you see the kitchen. ",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move south"
+            ],
+            "action": "move south",
+            "reward": 0.0,
+            "next_observation": "You are in the kitchen. In one part of the room you see a stove. There is also an oven. You also see a fridge that is closed. In another part of the room you see a counter, that has nothing on it. In one part of the room you see a kitchen cupboard that is closed. There is also a cutlery drawer that is closed. You also see a trash can that is closed. In another part of the room you see a dishwasher that is closed. In one part of the room you see a dining chair, that has nothing on it. \nTo the North you see the pantry. To the East you see the backyard. ",
+            "done": false
+          },
+          {
+            "observation": "You are in the kitchen. In one part of the room you see a stove. There is also an oven. You also see a fridge that is closed. In another part of the room you see a counter, that has nothing on it. In one part of the room you see a kitchen cupboard that is closed. There is also a cutlery drawer that is closed. You also see a trash can that is closed. In another part of the room you see a dishwasher that is closed. In one part of the room you see a dining chair, that has nothing on it. \nTo the North you see the pantry. To the East you see the backyard. ",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move east",
+              "move north"
+            ],
+            "action": "move north",
+            "reward": 0.0,
+            "next_observation": "You are in the pantry. In one part of the room you see a folding chair, that has nothing on it. There is also a shelf, that has nothing on it. \nTo the South you see the kitchen. ",
+            "done": false
+          },
+          {
+            "observation": "You are in the pantry. In one part of the room you see a folding chair, that has nothing on it. There is also a shelf, that has nothing on it. \nTo the South you see the kitchen. ",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move south"
+            ],
+            "action": "move south",
+            "reward": 0.0,
+            "next_observation": "You are in the kitchen. In one part of the room you see a stove. There is also an oven. You also see a fridge that is closed. In another part of the room you see a counter, that has nothing on it. In one part of the room you see a kitchen cupboard that is closed. There is also a cutlery drawer that is closed. You also see a trash can that is closed. In another part of the room you see a dishwasher that is closed. In one part of the room you see a dining chair, that has nothing on it. \nTo the North you see the pantry. To the East you see the backyard. ",
+            "done": false
+          },
+          {
+            "observation": "You are in the kitchen. In one part of the room you see a stove. There is also an oven. You also see a fridge that is closed. In another part of the room you see a counter, that has nothing on it. In one part of the room you see a kitchen cupboard that is closed. There is also a cutlery drawer that is closed. You also see a trash can that is closed. In another part of the room you see a dishwasher that is closed. In one part of the room you see a dining chair, that has nothing on it. \nTo the North you see the pantry. To the East you see the backyard. ",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move east",
+              "move north"
+            ],
+            "action": "move east",
+            "reward": 0.0,
+            "next_observation": "You are in the backyard. In one part of the room you see a barbeque. There is also a workbench, that has nothing on it. You also see a patio chair, that has nothing on it. In another part of the room you see a patio table, that has nothing on it. In one part of the room you see a clothes line, that has nothing on it. There is also a garden, that has nothing on it. \nTo the South you see the corridor. To the West you see the kitchen. ",
+            "done": false
+          },
+          {
+            "observation": "You are in the backyard. In one part of the room you see a barbeque. There is also a workbench, that has nothing on it. You also see a patio chair, that has nothing on it. In another part of the room you see a patio table, that has nothing on it. In one part of the room you see a clothes line, that has nothing on it. There is also a garden, that has nothing on it. \nTo the South you see the corridor. To the West you see the kitchen. ",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move south",
+              "move west"
+            ],
+            "action": "move west",
+            "reward": 0.0,
+            "next_observation": "You are in the kitchen. In one part of the room you see a stove. There is also an oven. You also see a fridge that is closed. In another part of the room you see a counter, that has nothing on it. In one part of the room you see a kitchen cupboard that is closed. There is also a cutlery drawer that is closed. You also see a trash can that is closed. In another part of the room you see a dishwasher that is closed. In one part of the room you see a dining chair, that has nothing on it. \nTo the North you see the pantry. To the East you see the backyard. ",
+            "done": false
+          },
+          {
+            "observation": "You are in the kitchen. In one part of the room you see a stove. There is also an oven. You also see a fridge that is closed. In another part of the room you see a counter, that has nothing on it. In one part of the room you see a kitchen cupboard that is closed. There is also a cutlery drawer that is closed. You also see a trash can that is closed. In another part of the room you see a dishwasher that is closed. In one part of the room you see a dining chair, that has nothing on it. \nTo the North you see the pantry. To the East you see the backyard. ",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move east",
+              "move north"
+            ],
+            "action": "move east",
+            "reward": 0.0,
+            "next_observation": "You are in the backyard. In one part of the room you see a barbeque. There is also a workbench, that has nothing on it. You also see a patio chair, that has nothing on it. In another part of the room you see a patio table, that has nothing on it. In one part of the room you see a clothes line, that has nothing on it. There is also a garden, that has nothing on it. \nTo the South you see the corridor. To the West you see the kitchen. ",
+            "done": false
+          },
+          {
+            "observation": "You are in the backyard. In one part of the room you see a barbeque. There is also a workbench, that has nothing on it. You also see a patio chair, that has nothing on it. In another part of the room you see a patio table, that has nothing on it. In one part of the room you see a clothes line, that has nothing on it. There is also a garden, that has nothing on it. \nTo the South you see the corridor. To the West you see the kitchen. ",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move south",
+              "move west"
+            ],
+            "action": "move south",
+            "reward": 0.0,
+            "next_observation": "You are in the corridor. In one part of the room you see a key holder, that has nothing on it. There is also a shoe cabinet that is closed. You also see a umbrella stand, that has nothing on it. In another part of the room you see a hat rack, that has nothing on it. In one part of the room you see a coat hanger, that has nothing on it. There is also a coin. \nTo the North you see the backyard. To the West you see the bedroom. ",
+            "done": false
+          },
+          {
+            "observation": "You are in the corridor. In one part of the room you see a key holder, that has nothing on it. There is also a shoe cabinet that is closed. You also see a umbrella stand, that has nothing on it. In another part of the room you see a hat rack, that has nothing on it. In one part of the room you see a coat hanger, that has nothing on it. There is also a coin. \nTo the North you see the backyard. To the West you see the bedroom. ",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move north",
+              "move west",
+              "take coin"
+            ],
+            "action": "take coin",
+            "reward": 1.0,
+            "next_observation": "You take the coin.",
+            "done": true
+          }
+        ]
+      }
+    },
+    {
+      "game": "coin",
+      "seed": 3,
+      "objective": "Explore the rooms and take the coin.",
+      "failed": {
+        "score": 0.0,
+        "steps": [
+          {
+            "observation": "You are in the kitchen. In one part of the room you see a stove. There is also an oven. You also see a fridge that is closed. In another part of the room you see a counter, that has nothing on it. In one part of the room you see a kitchen cupboard that is closed. There is also a cutlery drawer that is closed. You also see a trash can that is closed. In another part of the room you see a dishwasher that is closed. In one part of the room you see a dining chair, that has nothing on it. There is also a coin. \nTo the South you see the backyard. To the West you see the pantry. ",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move south",
+              "move west",
+              "take coin"
+            ],
+            "action": "move south",
+            "reward": 0.0,
+            "next_observation": "You are in the backyard. In one part of the room you see a barbeque. There is also a workbench, that has nothing on it. You also see a patio chair, that has nothing on it. In another part of the room you see a patio table, that has nothing on it. In one part of the room you see a clothes line, that has nothing on it. There is also a garden, that has nothing on it. \nTo the North you see the kitchen. To the East you see the corridor. ",
+            "done": false
+          },
+          {
+            "observation": "You are in the backyard. In one part of the room you see a barbeque. There is also a workbench, that has nothing on it. You also see a patio chair, that has nothing on it. In another part of the room you see a patio table, that has nothing on it. In one part of the room you see a clothes line, that has nothing on it. There is also a garden, that has nothing on it. \nTo the North you see the kitchen. To the East you see the corridor. ",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move east",
+              "move north"
+            ],
+            "action": "move east",
+            "reward": 0.0,
+            "next_observation": "You are in the corridor. In one part of the room you see a key holder, that has nothing on it. There is also a shoe cabinet that is closed. You also see a umbrella stand, that has nothing on it. In another part of the room you see a hat rack, that has nothing on it. In one part of the room you see a coat hanger, that has nothing on it. \nTo the North you see the bedroom. To the West you see the backyard. ",
+            "done": false
+          },
+          {
+            "observation": "You are in the corridor. In one part of the room you see a key holder, that has nothing on it. There is also a shoe cabinet that is closed. You also see a umbrella stand, that has nothing on it. In another part of the room you see a hat rack, that has nothing on it. In one part of the room you see a coat hanger, that has nothing on it. \nTo the North you see the bedroom. To the West you see the backyard. ",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move north",
+              "move west"
+            ],
+            "action": "move west",
+            "reward": 0.0,
+            "next_observation": "You are in the backyard. In one part of the room you see a barbeque. There is also a workbench, that has nothing on it. You also see a patio chair, that has nothing on it. In another part of the room you see a patio table, that has nothing on it. In one part of the room you see a clothes line, that has nothing on it. There is also a garden, that has nothing on it. \nTo the North you see the kitchen. To the East you see the corridor. ",
+            "done": false
+          }
+        ]
+      },
+      "successful": {
+        "score": 1.0,
+        "steps": [
+          {
+            "observation": "You are in the kitchen. In one part of the room you see a stove. There is also an oven. You also see a fridge that is closed. In another part of the room you see a counter, that has nothing on it. In one part of the room you see a kitchen cupboard that is closed. There is also a cutlery drawer that is closed. You also see a trash can that is closed. In another part of the room you see a dishwasher that is closed. In one part of the room you see a dining chair, that has nothing on it. There is also a coin. \nTo the South you see the backyard. To the West you see the pantry. ",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move south",
+              "move west",
+              "take coin"
+            ],
+            "action": "look around",
+            "reward": 0.0,
+            "next_observation": "You are in the kitchen. In one part of the room you see a stove. There is also an oven. You also see a fridge that is closed. In another part of the room you see a counter, that has nothing on it. In one part of the room you see a kitchen cupboard that is closed. There is also a cutlery drawer that is closed. You also see a trash can that is closed. In another part of the room you see a dishwasher that is closed. In one part of the room you see a dining chair, that has nothing on it. There is also a coin. \nTo the South you see the backyard. To the West you see the pantry. ",
+            "done": false
+          },
+          {
+            "observation": "You are in the kitchen. In one part of the room you see a stove. There is also an oven. You also see a fridge that is closed. In another part of the room you see a counter, that has nothing on it. In one part of the room you see a kitchen cupboard that is closed. There is also a cutlery drawer that is closed. You also see a trash can that is closed. In another part of the room you see a dishwasher that is closed. In one part of the room you see a dining chair, that has nothing on it. There is also a coin. \nTo the South you see the backyard. To the West you see the pantry. ",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move south",
+              "move west",
+              "take coin"
+            ],
+            "action": "take coin",
+            "reward": 1.0,
+            "next_observation": "You take the coin.",
+            "done": true
+          }
+        ]
+      }
+    },
+    {
+      "game": "coin",
+      "seed": 4,
+      "objective": "Explore the rooms and take the coin.",
+      "failed": {
+        "score": 1.0,
+        "steps": [
+          {
+            "observation": "You are in the kitchen. In one part of the room you see a stove. There is also an oven. You also see a fridge that is closed. In another part of the room you see a counter, that has nothing on it. In one part of the room you see a kitchen cupboard that is closed. There is also a cutlery drawer that is closed. You also see a trash can that is closed. In another part of the room you see a dishwasher that is closed. In one part of the room you see a dining chair, that has nothing on it. There is also a coin. \nTo the North you see the corridor. To the South you see the pantry. To the East you see the backyard. ",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move east",
+              "move north",
+              "move south",
+              "take coin"
+            ],
+            "action": "take coin",
+            "reward": 1.0,
+            "next_observation": "You take the coin.",
+            "done": true
+          }
+        ]
+      },
+      "successful": {
+        "score": 1.0,
+        "steps": [
+          {
+            "observation": "You are in the kitchen. In one part of the room you see a stove. There is also an oven. You also see a fridge that is closed. In another part of the room you see a counter, that has nothing on it. In one part of the room you see a kitchen cupboard that is closed. There is also a cutlery drawer that is closed. You also see a trash can that is closed. In another part of the room you see a dishwasher that is closed. In one part of the room you see a dining chair, that has nothing on it. There is also a coin. \nTo the North you see the corridor. To the South you see the pantry. To the East you see the backyard. ",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move east",
+              "move north",
+              "move south",
+              "take coin"
+            ],
+            "action": "look around",
+            "reward": 0.0,
+            "next_observation": "You are in the kitchen. In one part of the room you see a stove. There is also an oven. You also see a fridge that is closed. In another part of the room you see a counter, that has nothing on it. In one part of the room you see a kitchen cupboard that is closed. There is also a cutlery drawer that is closed. You also see a trash can that is closed. In another part of the room you see a dishwasher that is closed. In one part of the room you see a dining chair, that has nothing on it. There is also a coin. \nTo the North you see the corridor. To the South you see the pantry. To the East you see the backyard. ",
+            "done": false
+          },
+          {
+            "observation": "You are in the kitchen. In one part of the room you see a stove. There is also an oven. You also see a fridge that is closed. In another part of the room you see a counter, that has nothing on it. In one part of the room you see a kitchen cupboard that is closed. There is also a cutlery drawer that is closed. You also see a trash can that is closed. In another part of the room you see a dishwasher that is closed. In one part of the room you see a dining chair, that has nothing on it. There is also a coin. \nTo the North you see the corridor. To the South you see the pantry. To the East you see the backyard. ",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move east",
+              "move north",
+              "move south",
+              "take coin"
+            ],
+            "action": "take coin",
+            "reward": 1.0,
+            "next_observation": "You take the coin.",
+            "done": true
+          }
+        ]
+      }
+    },
+    {
+      "game": "coin",
+      "seed": 5,
+      "objective": "Explore the rooms and take the coin.",
+      "failed": {
+        "score": 1.0,
+        "steps": [
+          {
+            "observation": "You are in the kitchen. In one part of the room you see a stove. There is also an oven. You also see a fridge that is closed. In another part of the room you see a counter, that has nothing on it. In one part of the room you see a kitchen cupboard that is closed. There is also a cutlery drawer that is closed. You also see a trash can that is closed. In another part of the room you see a dishwasher that is closed. In one part of the room you see a dining chair, that has nothing on it. There is also a coin. \nTo the South you see the backyard. To the East you see the pantry. ",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move east",
+              "move south",
+              "take coin"
+            ],
+            "action": "take coin",
+            "reward": 1.0,
+            "next_observation": "You take the coin.",
+            "done": true
+          }
+        ]
+      },
+      "successful": {
+        "score": 1.0,
+        "steps": [
+          {
+            "observation": "You are in the kitchen. In one part of the room you see a stove. There is also an oven. You also see a fridge that is closed. In another part of the room you see a counter, that has nothing on it. In one part of the room you see a kitchen cupboard that is closed. There is also a cutlery drawer that is closed. You also see a trash can that is closed. In another part of the room you see a dishwasher that is closed. In one part of the room you see a dining chair, that has nothing on it. There is also a coin. \nTo the South you see the backyard. To the East you see the pantry. ",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move east",
+              "move south",
+              "take coin"
+            ],
+            "action": "look around",
+            "reward": 0.0,
+            "next_observation": "You are in the kitchen. In one part of the room you see a stove. There is also an oven. You also see a fridge that is closed. In another part of the room you see a counter, that has nothing on it. In one part of the room you see a kitchen cupboard that is closed. There is also a cutlery drawer that is closed. You also see a trash can that is closed. In another part of the room you see a dishwasher that is closed. In one part of the room you see a dining chair, that has nothing on it. There is also a coin. \nTo the South you see the backyard. To the East you see the pantry. ",
+            "done": false
+          },
+          {
+            "observation": "You are in the kitchen. In one part of the room you see a stove. There is also an oven. You also see a fridge that is closed. In another part of the room you see a counter, that has nothing on it. In one part of the room you see a kitchen cupboard that is closed. There is also a cutlery drawer that is closed. You also see a trash can that is closed. In another part of the room you see a dishwasher that is closed. In one part of the room you see a dining chair, that has nothing on it. There is also a coin. \nTo the South you see the backyard. To the East you see the pantry. ",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move east",
+              "move south",
+              "take coin"
+            ],
+            "action": "take coin",
+            "reward": 1.0,
+            "next_observation": "You take the coin.",
+            "done": true
+          }
+        ]
+      }
+    },
+    {
+      "game": "mapreader",
+      "seed": 0,
+      "objective": "Use the map, retrieve the coin, return to the starting room, and put it in the box.",
+      "failed": {
+        "score": 0.0,
+        "steps": [
+          {
+            "observation": "You are in the chamber. In one part of the room you see a box, that is empty. \nTo the South you see the parlor. To the East you see the cupboard. To the West you see the living room. ",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move east",
+              "move south",
+              "move west",
+              "put map in box",
+              "read map",
+              "task"
+            ],
+            "action": "read map",
+            "reward": 0.0,
+            "next_observation": "The map reads:\n  The parlor connects to the chamber.\n  The cupboard connects to the chamber.\n  The living room connects to the chamber and study.\n  The study connects to the living room.\n  The chamber connects to the cupboard, living room and parlor.\n",
+            "done": false
+          },
+          {
+            "observation": "The map reads:\n  The parlor connects to the chamber.\n  The cupboard connects to the chamber.\n  The living room connects to the chamber and study.\n  The study connects to the living room.\n  The chamber connects to the cupboard, living room and parlor.\n",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move east",
+              "move south",
+              "move west",
+              "put map in box",
+              "read map",
+              "task"
+            ],
+            "action": "move west",
+            "reward": 0.0,
+            "next_observation": "You are in the living room. In one part of the room you see a coin. \nTo the North you see the study. To the East you see the chamber. ",
+            "done": false
+          },
+          {
+            "observation": "You are in the living room. In one part of the room you see a coin. \nTo the North you see the study. To the East you see the chamber. ",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move east",
+              "move north",
+              "read map",
+              "take coin",
+              "task"
+            ],
+            "action": "move east",
+            "reward": 0.0,
+            "next_observation": "You are in the chamber. In one part of the room you see a box, that is empty. \nTo the South you see the parlor. To the East you see the cupboard. To the West you see the living room. ",
+            "done": false
+          },
+          {
+            "observation": "You are in the chamber. In one part of the room you see a box, that is empty. \nTo the South you see the parlor. To the East you see the cupboard. To the West you see the living room. ",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move east",
+              "move south",
+              "move west",
+              "put map in box",
+              "read map",
+              "task"
+            ],
+            "action": "move east",
+            "reward": 0.0,
+            "next_observation": "You are in the cupboard. \nTo the West you see the chamber. ",
+            "done": false
+          },
+          {
+            "observation": "You are in the cupboard. \nTo the West you see the chamber. ",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move west",
+              "read map",
+              "task"
+            ],
+            "action": "task",
+            "reward": 0.0,
+            "next_observation": "Your task is to take the coin that is located in the living room, and put it into the box found in the chamber. A map is provided, that you may find helpful.",
+            "done": false
+          },
+          {
+            "observation": "Your task is to take the coin that is located in the living room, and put it into the box found in the chamber. A map is provided, that you may find helpful.",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move west",
+              "read map",
+              "task"
+            ],
+            "action": "move west",
+            "reward": 0.0,
+            "next_observation": "You are in the chamber. In one part of the room you see a box, that is empty. \nTo the South you see the parlor. To the East you see the cupboard. To the West you see the living room. ",
+            "done": false
+          },
+          {
+            "observation": "You are in the chamber. In one part of the room you see a box, that is empty. \nTo the South you see the parlor. To the East you see the cupboard. To the West you see the living room. ",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move east",
+              "move south",
+              "move west",
+              "put map in box",
+              "read map",
+              "task"
+            ],
+            "action": "task",
+            "reward": 0.0,
+            "next_observation": "Your task is to take the coin that is located in the living room, and put it into the box found in the chamber. A map is provided, that you may find helpful.",
+            "done": false
+          }
+        ]
+      },
+      "successful": {
+        "score": 1.0,
+        "steps": [
+          {
+            "observation": "You are in the chamber. In one part of the room you see a box, that is empty. \nTo the South you see the parlor. To the East you see the cupboard. To the West you see the living room. ",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move east",
+              "move south",
+              "move west",
+              "put map in box",
+              "read map",
+              "task"
+            ],
+            "action": "look around",
+            "reward": 0.0,
+            "next_observation": "You are in the chamber. In one part of the room you see a box, that is empty. \nTo the South you see the parlor. To the East you see the cupboard. To the West you see the living room. ",
+            "done": false
+          },
+          {
+            "observation": "You are in the chamber. In one part of the room you see a box, that is empty. \nTo the South you see the parlor. To the East you see the cupboard. To the West you see the living room. ",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move east",
+              "move south",
+              "move west",
+              "put map in box",
+              "read map",
+              "task"
+            ],
+            "action": "task",
+            "reward": 0.0,
+            "next_observation": "Your task is to take the coin that is located in the living room, and put it into the box found in the chamber. A map is provided, that you may find helpful.",
+            "done": false
+          },
+          {
+            "observation": "Your task is to take the coin that is located in the living room, and put it into the box found in the chamber. A map is provided, that you may find helpful.",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move east",
+              "move south",
+              "move west",
+              "put map in box",
+              "read map",
+              "task"
+            ],
+            "action": "read map",
+            "reward": 0.0,
+            "next_observation": "The map reads:\n  The parlor connects to the chamber.\n  The cupboard connects to the chamber.\n  The living room connects to the chamber and study.\n  The study connects to the living room.\n  The chamber connects to the cupboard, living room and parlor.\n",
+            "done": false
+          },
+          {
+            "observation": "The map reads:\n  The parlor connects to the chamber.\n  The cupboard connects to the chamber.\n  The living room connects to the chamber and study.\n  The study connects to the living room.\n  The chamber connects to the cupboard, living room and parlor.\n",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move east",
+              "move south",
+              "move west",
+              "put map in box",
+              "read map",
+              "task"
+            ],
+            "action": "move west",
+            "reward": 0.0,
+            "next_observation": "You are in the living room. In one part of the room you see a coin. \nTo the North you see the study. To the East you see the chamber. ",
+            "done": false
+          },
+          {
+            "observation": "You are in the living room. In one part of the room you see a coin. \nTo the North you see the study. To the East you see the chamber. ",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move east",
+              "move north",
+              "read map",
+              "take coin",
+              "task"
+            ],
+            "action": "take coin",
+            "reward": 0.5,
+            "next_observation": "You take the coin.",
+            "done": false
+          },
+          {
+            "observation": "You take the coin.",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move east",
+              "move north",
+              "read map",
+              "task"
+            ],
+            "action": "move east",
+            "reward": 0.0,
+            "next_observation": "You are in the chamber. In one part of the room you see a box, that is empty. \nTo the South you see the parlor. To the East you see the cupboard. To the West you see the living room. ",
+            "done": false
+          },
+          {
+            "observation": "You are in the chamber. In one part of the room you see a box, that is empty. \nTo the South you see the parlor. To the East you see the cupboard. To the West you see the living room. ",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move east",
+              "move south",
+              "move west",
+              "put coin in box",
+              "put map in box",
+              "read map",
+              "task"
+            ],
+            "action": "put coin in box",
+            "reward": 0.5,
+            "next_observation": "You put the coin in the box.",
+            "done": true
+          }
+        ]
+      }
+    },
+    {
+      "game": "mapreader",
+      "seed": 1,
+      "objective": "Use the map, retrieve the coin, return to the starting room, and put it in the box.",
+      "failed": {
+        "score": 0.0,
+        "steps": [
+          {
+            "observation": "You are in the cookery. In one part of the room you see a box, that is empty. \nTo the West you see the laundromat. ",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move west",
+              "put map in box",
+              "read map",
+              "task"
+            ],
+            "action": "read map",
+            "reward": 0.0,
+            "next_observation": "The map reads:\n  The playroom connects to the office and laundromat.\n  The cookery connects to the laundromat.\n  The bathroom connects to the laundromat.\n  The office connects to the playroom.\n  The laundromat connects to the cookery, playroom and bathroom.\n",
+            "done": false
+          },
+          {
+            "observation": "The map reads:\n  The playroom connects to the office and laundromat.\n  The cookery connects to the laundromat.\n  The bathroom connects to the laundromat.\n  The office connects to the playroom.\n  The laundromat connects to the cookery, playroom and bathroom.\n",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move west",
+              "put map in box",
+              "read map",
+              "task"
+            ],
+            "action": "move west",
+            "reward": 0.0,
+            "next_observation": "You are in the laundromat. \nTo the North you see the bathroom. To the East you see the cookery. To the West you see the playroom. ",
+            "done": false
+          },
+          {
+            "observation": "You are in the laundromat. \nTo the North you see the bathroom. To the East you see the cookery. To the West you see the playroom. ",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move east",
+              "move north",
+              "move west",
+              "read map",
+              "task"
+            ],
+            "action": "move east",
+            "reward": 0.0,
+            "next_observation": "You are in the cookery. In one part of the room you see a box, that is empty. \nTo the West you see the laundromat. ",
+            "done": false
+          },
+          {
+            "observation": "You are in the cookery. In one part of the room you see a box, that is empty. \nTo the West you see the laundromat. ",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move west",
+              "put map in box",
+              "read map",
+              "task"
+            ],
+            "action": "read map",
+            "reward": 0.0,
+            "next_observation": "The map reads:\n  The playroom connects to the office and laundromat.\n  The cookery connects to the laundromat.\n  The bathroom connects to the laundromat.\n  The office connects to the playroom.\n  The laundromat connects to the cookery, playroom and bathroom.\n",
+            "done": false
+          },
+          {
+            "observation": "The map reads:\n  The playroom connects to the office and laundromat.\n  The cookery connects to the laundromat.\n  The bathroom connects to the laundromat.\n  The office connects to the playroom.\n  The laundromat connects to the cookery, playroom and bathroom.\n",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move west",
+              "put map in box",
+              "read map",
+              "task"
+            ],
+            "action": "task",
+            "reward": 0.0,
+            "next_observation": "Your task is to take the coin that is located in the playroom, and put it into the box found in the cookery. A map is provided, that you may find helpful.",
+            "done": false
+          },
+          {
+            "observation": "Your task is to take the coin that is located in the playroom, and put it into the box found in the cookery. A map is provided, that you may find helpful.",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move west",
+              "put map in box",
+              "read map",
+              "task"
+            ],
+            "action": "task",
+            "reward": 0.0,
+            "next_observation": "Your task is to take the coin that is located in the playroom, and put it into the box found in the cookery. A map is provided, that you may find helpful.",
+            "done": false
+          },
+          {
+            "observation": "Your task is to take the coin that is located in the playroom, and put it into the box found in the cookery. A map is provided, that you may find helpful.",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move west",
+              "put map in box",
+              "read map",
+              "task"
+            ],
+            "action": "move west",
+            "reward": 0.0,
+            "next_observation": "You are in the laundromat. \nTo the North you see the bathroom. To the East you see the cookery. To the West you see the playroom. ",
+            "done": false
+          },
+          {
+            "observation": "You are in the laundromat. \nTo the North you see the bathroom. To the East you see the cookery. To the West you see the playroom. ",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move east",
+              "move north",
+              "move west",
+              "read map",
+              "task"
+            ],
+            "action": "read map",
+            "reward": 0.0,
+            "next_observation": "The map reads:\n  The playroom connects to the office and laundromat.\n  The cookery connects to the laundromat.\n  The bathroom connects to the laundromat.\n  The office connects to the playroom.\n  The laundromat connects to the cookery, playroom and bathroom.\n",
+            "done": false
+          },
+          {
+            "observation": "The map reads:\n  The playroom connects to the office and laundromat.\n  The cookery connects to the laundromat.\n  The bathroom connects to the laundromat.\n  The office connects to the playroom.\n  The laundromat connects to the cookery, playroom and bathroom.\n",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move east",
+              "move north",
+              "move west",
+              "read map",
+              "task"
+            ],
+            "action": "move north",
+            "reward": 0.0,
+            "next_observation": "You are in the bathroom. \nTo the South you see the laundromat. ",
+            "done": false
+          }
+        ]
+      },
+      "successful": {
+        "score": 1.0,
+        "steps": [
+          {
+            "observation": "You are in the cookery. In one part of the room you see a box, that is empty. \nTo the West you see the laundromat. ",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move west",
+              "put map in box",
+              "read map",
+              "task"
+            ],
+            "action": "look around",
+            "reward": 0.0,
+            "next_observation": "You are in the cookery. In one part of the room you see a box, that is empty. \nTo the West you see the laundromat. ",
+            "done": false
+          },
+          {
+            "observation": "You are in the cookery. In one part of the room you see a box, that is empty. \nTo the West you see the laundromat. ",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move west",
+              "put map in box",
+              "read map",
+              "task"
+            ],
+            "action": "task",
+            "reward": 0.0,
+            "next_observation": "Your task is to take the coin that is located in the playroom, and put it into the box found in the cookery. A map is provided, that you may find helpful.",
+            "done": false
+          },
+          {
+            "observation": "Your task is to take the coin that is located in the playroom, and put it into the box found in the cookery. A map is provided, that you may find helpful.",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move west",
+              "put map in box",
+              "read map",
+              "task"
+            ],
+            "action": "read map",
+            "reward": 0.0,
+            "next_observation": "The map reads:\n  The playroom connects to the office and laundromat.\n  The cookery connects to the laundromat.\n  The bathroom connects to the laundromat.\n  The office connects to the playroom.\n  The laundromat connects to the cookery, playroom and bathroom.\n",
+            "done": false
+          },
+          {
+            "observation": "The map reads:\n  The playroom connects to the office and laundromat.\n  The cookery connects to the laundromat.\n  The bathroom connects to the laundromat.\n  The office connects to the playroom.\n  The laundromat connects to the cookery, playroom and bathroom.\n",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move west",
+              "put map in box",
+              "read map",
+              "task"
+            ],
+            "action": "move west",
+            "reward": 0.0,
+            "next_observation": "You are in the laundromat. \nTo the North you see the bathroom. To the East you see the cookery. To the West you see the playroom. ",
+            "done": false
+          },
+          {
+            "observation": "You are in the laundromat. \nTo the North you see the bathroom. To the East you see the cookery. To the West you see the playroom. ",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move east",
+              "move north",
+              "move west",
+              "read map",
+              "task"
+            ],
+            "action": "move west",
+            "reward": 0.0,
+            "next_observation": "You are in the playroom. In one part of the room you see a coin. \nTo the East you see the laundromat. To the West you see the office. ",
+            "done": false
+          },
+          {
+            "observation": "You are in the playroom. In one part of the room you see a coin. \nTo the East you see the laundromat. To the West you see the office. ",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move east",
+              "move west",
+              "read map",
+              "take coin",
+              "task"
+            ],
+            "action": "take coin",
+            "reward": 0.5,
+            "next_observation": "You take the coin.",
+            "done": false
+          },
+          {
+            "observation": "You take the coin.",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move east",
+              "move west",
+              "read map",
+              "task"
+            ],
+            "action": "move east",
+            "reward": 0.0,
+            "next_observation": "You are in the laundromat. \nTo the North you see the bathroom. To the East you see the cookery. To the West you see the playroom. ",
+            "done": false
+          },
+          {
+            "observation": "You are in the laundromat. \nTo the North you see the bathroom. To the East you see the cookery. To the West you see the playroom. ",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move east",
+              "move north",
+              "move west",
+              "read map",
+              "task"
+            ],
+            "action": "move east",
+            "reward": 0.0,
+            "next_observation": "You are in the cookery. In one part of the room you see a box, that is empty. \nTo the West you see the laundromat. ",
+            "done": false
+          },
+          {
+            "observation": "You are in the cookery. In one part of the room you see a box, that is empty. \nTo the West you see the laundromat. ",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move west",
+              "put coin in box",
+              "put map in box",
+              "read map",
+              "task"
+            ],
+            "action": "put coin in box",
+            "reward": 0.5,
+            "next_observation": "You put the coin in the box.",
+            "done": true
+          }
+        ]
+      }
+    },
+    {
+      "game": "mapreader",
+      "seed": 2,
+      "objective": "Use the map, retrieve the coin, return to the starting room, and put it in the box.",
+      "failed": {
+        "score": 0.0,
+        "steps": [
+          {
+            "observation": "You are in the studio. In one part of the room you see a box, that is empty. \nTo the East you see the study. To the West you see the shower. ",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move east",
+              "move west",
+              "put map in box",
+              "read map",
+              "task"
+            ],
+            "action": "read map",
+            "reward": 0.0,
+            "next_observation": "The map reads:\n  The study connects to the cellar, studio and kitchenette.\n  The cellar connects to the study.\n  The shower connects to the studio.\n  The kitchenette connects to the study.\n  The studio connects to the shower and study.\n",
+            "done": false
+          },
+          {
+            "observation": "The map reads:\n  The study connects to the cellar, studio and kitchenette.\n  The cellar connects to the study.\n  The shower connects to the studio.\n  The kitchenette connects to the study.\n  The studio connects to the shower and study.\n",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move east",
+              "move west",
+              "put map in box",
+              "read map",
+              "task"
+            ],
+            "action": "move west",
+            "reward": 0.0,
+            "next_observation": "You are in the shower. \nTo the East you see the studio. ",
+            "done": false
+          },
+          {
+            "observation": "You are in the shower. \nTo the East you see the studio. ",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move east",
+              "read map",
+              "task"
+            ],
+            "action": "move east",
+            "reward": 0.0,
+            "next_observation": "You are in the studio. In one part of the room you see a box, that is empty. \nTo the East you see the study. To the West you see the shower. ",
+            "done": false
+          },
+          {
+            "observation": "You are in the studio. In one part of the room you see a box, that is empty. \nTo the East you see the study. To the West you see the shower. ",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move east",
+              "move west",
+              "put map in box",
+              "read map",
+              "task"
+            ],
+            "action": "move west",
+            "reward": 0.0,
+            "next_observation": "You are in the shower. \nTo the East you see the studio. ",
+            "done": false
+          },
+          {
+            "observation": "You are in the shower. \nTo the East you see the studio. ",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move east",
+              "read map",
+              "task"
+            ],
+            "action": "task",
+            "reward": 0.0,
+            "next_observation": "Your task is to take the coin that is located in the study, and put it into the box found in the studio. A map is provided, that you may find helpful.",
+            "done": false
+          },
+          {
+            "observation": "Your task is to take the coin that is located in the study, and put it into the box found in the studio. A map is provided, that you may find helpful.",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move east",
+              "read map",
+              "task"
+            ],
+            "action": "read map",
+            "reward": 0.0,
+            "next_observation": "The map reads:\n  The study connects to the cellar, studio and kitchenette.\n  The cellar connects to the study.\n  The shower connects to the studio.\n  The kitchenette connects to the study.\n  The studio connects to the shower and study.\n",
+            "done": false
+          },
+          {
+            "observation": "The map reads:\n  The study connects to the cellar, studio and kitchenette.\n  The cellar connects to the study.\n  The shower connects to the studio.\n  The kitchenette connects to the study.\n  The studio connects to the shower and study.\n",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move east",
+              "read map",
+              "task"
+            ],
+            "action": "move east",
+            "reward": 0.0,
+            "next_observation": "You are in the studio. In one part of the room you see a box, that is empty. \nTo the East you see the study. To the West you see the shower. ",
+            "done": false
+          }
+        ]
+      },
+      "successful": {
+        "score": 1.0,
+        "steps": [
+          {
+            "observation": "You are in the studio. In one part of the room you see a box, that is empty. \nTo the East you see the study. To the West you see the shower. ",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move east",
+              "move west",
+              "put map in box",
+              "read map",
+              "task"
+            ],
+            "action": "look around",
+            "reward": 0.0,
+            "next_observation": "You are in the studio. In one part of the room you see a box, that is empty. \nTo the East you see the study. To the West you see the shower. ",
+            "done": false
+          },
+          {
+            "observation": "You are in the studio. In one part of the room you see a box, that is empty. \nTo the East you see the study. To the West you see the shower. ",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move east",
+              "move west",
+              "put map in box",
+              "read map",
+              "task"
+            ],
+            "action": "task",
+            "reward": 0.0,
+            "next_observation": "Your task is to take the coin that is located in the study, and put it into the box found in the studio. A map is provided, that you may find helpful.",
+            "done": false
+          },
+          {
+            "observation": "Your task is to take the coin that is located in the study, and put it into the box found in the studio. A map is provided, that you may find helpful.",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move east",
+              "move west",
+              "put map in box",
+              "read map",
+              "task"
+            ],
+            "action": "read map",
+            "reward": 0.0,
+            "next_observation": "The map reads:\n  The study connects to the cellar, studio and kitchenette.\n  The cellar connects to the study.\n  The shower connects to the studio.\n  The kitchenette connects to the study.\n  The studio connects to the shower and study.\n",
+            "done": false
+          },
+          {
+            "observation": "The map reads:\n  The study connects to the cellar, studio and kitchenette.\n  The cellar connects to the study.\n  The shower connects to the studio.\n  The kitchenette connects to the study.\n  The studio connects to the shower and study.\n",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move east",
+              "move west",
+              "put map in box",
+              "read map",
+              "task"
+            ],
+            "action": "move east",
+            "reward": 0.0,
+            "next_observation": "You are in the study. In one part of the room you see a coin. \nTo the North you see the kitchenette. To the South you see the cellar. To the West you see the studio. ",
+            "done": false
+          },
+          {
+            "observation": "You are in the study. In one part of the room you see a coin. \nTo the North you see the kitchenette. To the South you see the cellar. To the West you see the studio. ",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move north",
+              "move south",
+              "move west",
+              "read map",
+              "take coin",
+              "task"
+            ],
+            "action": "take coin",
+            "reward": 0.5,
+            "next_observation": "You take the coin.",
+            "done": false
+          },
+          {
+            "observation": "You take the coin.",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move north",
+              "move south",
+              "move west",
+              "read map",
+              "task"
+            ],
+            "action": "move west",
+            "reward": 0.0,
+            "next_observation": "You are in the studio. In one part of the room you see a box, that is empty. \nTo the East you see the study. To the West you see the shower. ",
+            "done": false
+          },
+          {
+            "observation": "You are in the studio. In one part of the room you see a box, that is empty. \nTo the East you see the study. To the West you see the shower. ",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move east",
+              "move west",
+              "put coin in box",
+              "put map in box",
+              "read map",
+              "task"
+            ],
+            "action": "put coin in box",
+            "reward": 0.5,
+            "next_observation": "You put the coin in the box.",
+            "done": true
+          }
+        ]
+      }
+    },
+    {
+      "game": "mapreader",
+      "seed": 3,
+      "objective": "Use the map, retrieve the coin, return to the starting room, and put it in the box.",
+      "failed": {
+        "score": 0.0,
+        "steps": [
+          {
+            "observation": "You are in the alley. In one part of the room you see a box, that is empty. \nTo the North you see the parlor. To the West you see the launderette. ",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move north",
+              "move west",
+              "put map in box",
+              "read map",
+              "task"
+            ],
+            "action": "move west",
+            "reward": 0.0,
+            "next_observation": "You are in the launderette. In one part of the room you see a coin. \nTo the North you see the side yard. To the South you see the attic. To the East you see the alley. ",
+            "done": false
+          },
+          {
+            "observation": "You are in the launderette. In one part of the room you see a coin. \nTo the North you see the side yard. To the South you see the attic. To the East you see the alley. ",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move east",
+              "move north",
+              "move south",
+              "read map",
+              "take coin",
+              "task"
+            ],
+            "action": "move east",
+            "reward": 0.0,
+            "next_observation": "You are in the alley. In one part of the room you see a box, that is empty. \nTo the North you see the parlor. To the West you see the launderette. ",
+            "done": false
+          },
+          {
+            "observation": "You are in the alley. In one part of the room you see a box, that is empty. \nTo the North you see the parlor. To the West you see the launderette. ",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move north",
+              "move west",
+              "put map in box",
+              "read map",
+              "task"
+            ],
+            "action": "task",
+            "reward": 0.0,
+            "next_observation": "Your task is to take the coin that is located in the launderette, and put it into the box found in the alley. A map is provided, that you may find helpful.",
+            "done": false
+          },
+          {
+            "observation": "Your task is to take the coin that is located in the launderette, and put it into the box found in the alley. A map is provided, that you may find helpful.",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move north",
+              "move west",
+              "put map in box",
+              "read map",
+              "task"
+            ],
+            "action": "put map in box",
+            "reward": 0.0,
+            "next_observation": "You put the map in the box.",
+            "done": false
+          },
+          {
+            "observation": "You put the map in the box.",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move north",
+              "move west",
+              "take map",
+              "task"
+            ],
+            "action": "task",
+            "reward": 0.0,
+            "next_observation": "Your task is to take the coin that is located in the launderette, and put it into the box found in the alley. A map is provided, that you may find helpful.",
+            "done": false
+          },
+          {
+            "observation": "Your task is to take the coin that is located in the launderette, and put it into the box found in the alley. A map is provided, that you may find helpful.",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move north",
+              "move west",
+              "take map",
+              "task"
+            ],
+            "action": "task",
+            "reward": 0.0,
+            "next_observation": "Your task is to take the coin that is located in the launderette, and put it into the box found in the alley. A map is provided, that you may find helpful.",
+            "done": false
+          },
+          {
+            "observation": "Your task is to take the coin that is located in the launderette, and put it into the box found in the alley. A map is provided, that you may find helpful.",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move north",
+              "move west",
+              "take map",
+              "task"
+            ],
+            "action": "take map",
+            "reward": 0.0,
+            "next_observation": "You take the map.",
+            "done": false
+          }
+        ]
+      },
+      "successful": {
+        "score": 1.0,
+        "steps": [
+          {
+            "observation": "You are in the alley. In one part of the room you see a box, that is empty. \nTo the North you see the parlor. To the West you see the launderette. ",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move north",
+              "move west",
+              "put map in box",
+              "read map",
+              "task"
+            ],
+            "action": "look around",
+            "reward": 0.0,
+            "next_observation": "You are in the alley. In one part of the room you see a box, that is empty. \nTo the North you see the parlor. To the West you see the launderette. ",
+            "done": false
+          },
+          {
+            "observation": "You are in the alley. In one part of the room you see a box, that is empty. \nTo the North you see the parlor. To the West you see the launderette. ",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move north",
+              "move west",
+              "put map in box",
+              "read map",
+              "task"
+            ],
+            "action": "task",
+            "reward": 0.0,
+            "next_observation": "Your task is to take the coin that is located in the launderette, and put it into the box found in the alley. A map is provided, that you may find helpful.",
+            "done": false
+          },
+          {
+            "observation": "Your task is to take the coin that is located in the launderette, and put it into the box found in the alley. A map is provided, that you may find helpful.",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move north",
+              "move west",
+              "put map in box",
+              "read map",
+              "task"
+            ],
+            "action": "read map",
+            "reward": 0.0,
+            "next_observation": "The map reads:\n  The launderette connects to the side yard, attic and alley.\n  The attic connects to the launderette.\n  The side yard connects to the launderette and parlor.\n  The alley connects to the parlor and launderette.\n  The parlor connects to the alley and side yard.\n",
+            "done": false
+          },
+          {
+            "observation": "The map reads:\n  The launderette connects to the side yard, attic and alley.\n  The attic connects to the launderette.\n  The side yard connects to the launderette and parlor.\n  The alley connects to the parlor and launderette.\n  The parlor connects to the alley and side yard.\n",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move north",
+              "move west",
+              "put map in box",
+              "read map",
+              "task"
+            ],
+            "action": "move west",
+            "reward": 0.0,
+            "next_observation": "You are in the launderette. In one part of the room you see a coin. \nTo the North you see the side yard. To the South you see the attic. To the East you see the alley. ",
+            "done": false
+          },
+          {
+            "observation": "You are in the launderette. In one part of the room you see a coin. \nTo the North you see the side yard. To the South you see the attic. To the East you see the alley. ",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move east",
+              "move north",
+              "move south",
+              "read map",
+              "take coin",
+              "task"
+            ],
+            "action": "take coin",
+            "reward": 0.5,
+            "next_observation": "You take the coin.",
+            "done": false
+          },
+          {
+            "observation": "You take the coin.",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move east",
+              "move north",
+              "move south",
+              "read map",
+              "task"
+            ],
+            "action": "move east",
+            "reward": 0.0,
+            "next_observation": "You are in the alley. In one part of the room you see a box, that is empty. \nTo the North you see the parlor. To the West you see the launderette. ",
+            "done": false
+          },
+          {
+            "observation": "You are in the alley. In one part of the room you see a box, that is empty. \nTo the North you see the parlor. To the West you see the launderette. ",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move north",
+              "move west",
+              "put coin in box",
+              "put map in box",
+              "read map",
+              "task"
+            ],
+            "action": "put coin in box",
+            "reward": 0.5,
+            "next_observation": "You put the coin in the box.",
+            "done": true
+          }
+        ]
+      }
+    },
+    {
+      "game": "mapreader",
+      "seed": 4,
+      "objective": "Use the map, retrieve the coin, return to the starting room, and put it in the box.",
+      "failed": {
+        "score": 0.0,
+        "steps": [
+          {
+            "observation": "You are in the bedroom. In one part of the room you see a box, that is empty. \nTo the South you see the basement. To the East you see the canteen. To the West you see the shower. ",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move east",
+              "move south",
+              "move west",
+              "put map in box",
+              "read map",
+              "task"
+            ],
+            "action": "read map",
+            "reward": 0.0,
+            "next_observation": "The map reads:\n  The bathroom connects to the basement.\n  The shower connects to the bedroom.\n  The bedroom connects to the shower, basement and canteen.\n  The basement connects to the bedroom and bathroom.\n  The canteen connects to the bedroom.\n",
+            "done": false
+          },
+          {
+            "observation": "The map reads:\n  The bathroom connects to the basement.\n  The shower connects to the bedroom.\n  The bedroom connects to the shower, basement and canteen.\n  The basement connects to the bedroom and bathroom.\n  The canteen connects to the bedroom.\n",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move east",
+              "move south",
+              "move west",
+              "put map in box",
+              "read map",
+              "task"
+            ],
+            "action": "put map in box",
+            "reward": 0.0,
+            "next_observation": "You put the map in the box.",
+            "done": false
+          },
+          {
+            "observation": "You put the map in the box.",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move east",
+              "move south",
+              "move west",
+              "take map",
+              "task"
+            ],
+            "action": "move east",
+            "reward": 0.0,
+            "next_observation": "You are in the canteen. \nTo the West you see the bedroom. ",
+            "done": false
+          },
+          {
+            "observation": "You are in the canteen. \nTo the West you see the bedroom. ",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move west",
+              "task"
+            ],
+            "action": "task",
+            "reward": 0.0,
+            "next_observation": "Your task is to take the coin that is located in the bathroom, and put it into the box found in the bedroom. A map is provided, that you may find helpful.",
+            "done": false
+          },
+          {
+            "observation": "Your task is to take the coin that is located in the bathroom, and put it into the box found in the bedroom. A map is provided, that you may find helpful.",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move west",
+              "task"
+            ],
+            "action": "task",
+            "reward": 0.0,
+            "next_observation": "Your task is to take the coin that is located in the bathroom, and put it into the box found in the bedroom. A map is provided, that you may find helpful.",
+            "done": false
+          },
+          {
+            "observation": "Your task is to take the coin that is located in the bathroom, and put it into the box found in the bedroom. A map is provided, that you may find helpful.",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move west",
+              "task"
+            ],
+            "action": "move west",
+            "reward": 0.0,
+            "next_observation": "You are in the bedroom. In one part of the room you see A box, that contains a map. \nTo the South you see the basement. To the East you see the canteen. To the West you see the shower. ",
+            "done": false
+          },
+          {
+            "observation": "You are in the bedroom. In one part of the room you see A box, that contains a map. \nTo the South you see the basement. To the East you see the canteen. To the West you see the shower. ",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move east",
+              "move south",
+              "move west",
+              "take map",
+              "task"
+            ],
+            "action": "move south",
+            "reward": 0.0,
+            "next_observation": "You are in the basement. \nTo the North you see the bedroom. To the East you see the bathroom. ",
+            "done": false
+          },
+          {
+            "observation": "You are in the basement. \nTo the North you see the bedroom. To the East you see the bathroom. ",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move east",
+              "move north",
+              "task"
+            ],
+            "action": "move east",
+            "reward": 0.0,
+            "next_observation": "You are in the bathroom. In one part of the room you see a coin. \nTo the West you see the basement. ",
+            "done": false
+          },
+          {
+            "observation": "You are in the bathroom. In one part of the room you see a coin. \nTo the West you see the basement. ",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move west",
+              "take coin",
+              "task"
+            ],
+            "action": "move west",
+            "reward": 0.0,
+            "next_observation": "You are in the basement. \nTo the North you see the bedroom. To the East you see the bathroom. ",
+            "done": false
+          }
+        ]
+      },
+      "successful": {
+        "score": 1.0,
+        "steps": [
+          {
+            "observation": "You are in the bedroom. In one part of the room you see a box, that is empty. \nTo the South you see the basement. To the East you see the canteen. To the West you see the shower. ",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move east",
+              "move south",
+              "move west",
+              "put map in box",
+              "read map",
+              "task"
+            ],
+            "action": "look around",
+            "reward": 0.0,
+            "next_observation": "You are in the bedroom. In one part of the room you see a box, that is empty. \nTo the South you see the basement. To the East you see the canteen. To the West you see the shower. ",
+            "done": false
+          },
+          {
+            "observation": "You are in the bedroom. In one part of the room you see a box, that is empty. \nTo the South you see the basement. To the East you see the canteen. To the West you see the shower. ",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move east",
+              "move south",
+              "move west",
+              "put map in box",
+              "read map",
+              "task"
+            ],
+            "action": "task",
+            "reward": 0.0,
+            "next_observation": "Your task is to take the coin that is located in the bathroom, and put it into the box found in the bedroom. A map is provided, that you may find helpful.",
+            "done": false
+          },
+          {
+            "observation": "Your task is to take the coin that is located in the bathroom, and put it into the box found in the bedroom. A map is provided, that you may find helpful.",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move east",
+              "move south",
+              "move west",
+              "put map in box",
+              "read map",
+              "task"
+            ],
+            "action": "read map",
+            "reward": 0.0,
+            "next_observation": "The map reads:\n  The bathroom connects to the basement.\n  The shower connects to the bedroom.\n  The bedroom connects to the shower, basement and canteen.\n  The basement connects to the bedroom and bathroom.\n  The canteen connects to the bedroom.\n",
+            "done": false
+          },
+          {
+            "observation": "The map reads:\n  The bathroom connects to the basement.\n  The shower connects to the bedroom.\n  The bedroom connects to the shower, basement and canteen.\n  The basement connects to the bedroom and bathroom.\n  The canteen connects to the bedroom.\n",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move east",
+              "move south",
+              "move west",
+              "put map in box",
+              "read map",
+              "task"
+            ],
+            "action": "move south",
+            "reward": 0.0,
+            "next_observation": "You are in the basement. \nTo the North you see the bedroom. To the East you see the bathroom. ",
+            "done": false
+          },
+          {
+            "observation": "You are in the basement. \nTo the North you see the bedroom. To the East you see the bathroom. ",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move east",
+              "move north",
+              "read map",
+              "task"
+            ],
+            "action": "move east",
+            "reward": 0.0,
+            "next_observation": "You are in the bathroom. In one part of the room you see a coin. \nTo the West you see the basement. ",
+            "done": false
+          },
+          {
+            "observation": "You are in the bathroom. In one part of the room you see a coin. \nTo the West you see the basement. ",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move west",
+              "read map",
+              "take coin",
+              "task"
+            ],
+            "action": "take coin",
+            "reward": 0.5,
+            "next_observation": "You take the coin.",
+            "done": false
+          },
+          {
+            "observation": "You take the coin.",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move west",
+              "read map",
+              "task"
+            ],
+            "action": "move west",
+            "reward": 0.0,
+            "next_observation": "You are in the basement. \nTo the North you see the bedroom. To the East you see the bathroom. ",
+            "done": false
+          },
+          {
+            "observation": "You are in the basement. \nTo the North you see the bedroom. To the East you see the bathroom. ",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move east",
+              "move north",
+              "read map",
+              "task"
+            ],
+            "action": "move north",
+            "reward": 0.0,
+            "next_observation": "You are in the bedroom. In one part of the room you see a box, that is empty. \nTo the South you see the basement. To the East you see the canteen. To the West you see the shower. ",
+            "done": false
+          },
+          {
+            "observation": "You are in the bedroom. In one part of the room you see a box, that is empty. \nTo the South you see the basement. To the East you see the canteen. To the West you see the shower. ",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move east",
+              "move south",
+              "move west",
+              "put coin in box",
+              "put map in box",
+              "read map",
+              "task"
+            ],
+            "action": "put coin in box",
+            "reward": 0.5,
+            "next_observation": "You put the coin in the box.",
+            "done": true
+          }
+        ]
+      }
+    },
+    {
+      "game": "mapreader",
+      "seed": 5,
+      "objective": "Use the map, retrieve the coin, return to the starting room, and put it in the box.",
+      "failed": {
+        "score": 0.0,
+        "steps": [
+          {
+            "observation": "You are in the office. In one part of the room you see a box, that is empty. \nTo the South you see the canteen. ",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move south",
+              "put map in box",
+              "read map",
+              "task"
+            ],
+            "action": "task",
+            "reward": 0.0,
+            "next_observation": "Your task is to take the coin that is located in the canteen, and put it into the box found in the office. A map is provided, that you may find helpful.",
+            "done": false
+          },
+          {
+            "observation": "Your task is to take the coin that is located in the canteen, and put it into the box found in the office. A map is provided, that you may find helpful.",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move south",
+              "put map in box",
+              "read map",
+              "task"
+            ],
+            "action": "move south",
+            "reward": 0.0,
+            "next_observation": "You are in the canteen. In one part of the room you see a coin. \nTo the North you see the office. To the South you see the side yard. To the East you see the parlor. To the West you see the cubicle. ",
+            "done": false
+          },
+          {
+            "observation": "You are in the canteen. In one part of the room you see a coin. \nTo the North you see the office. To the South you see the side yard. To the East you see the parlor. To the West you see the cubicle. ",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move east",
+              "move north",
+              "move south",
+              "move west",
+              "read map",
+              "take coin",
+              "task"
+            ],
+            "action": "move south",
+            "reward": 0.0,
+            "next_observation": "You are in the side yard. \nTo the North you see the canteen. ",
+            "done": false
+          },
+          {
+            "observation": "You are in the side yard. \nTo the North you see the canteen. ",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move north",
+              "read map",
+              "task"
+            ],
+            "action": "read map",
+            "reward": 0.0,
+            "next_observation": "The map reads:\n  The cubicle connects to the canteen.\n  The canteen connects to the parlor, office, side yard and cubicle.\n  The office connects to the canteen.\n  The parlor connects to the canteen.\n  The side yard connects to the canteen.\n",
+            "done": false
+          },
+          {
+            "observation": "The map reads:\n  The cubicle connects to the canteen.\n  The canteen connects to the parlor, office, side yard and cubicle.\n  The office connects to the canteen.\n  The parlor connects to the canteen.\n  The side yard connects to the canteen.\n",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move north",
+              "read map",
+              "task"
+            ],
+            "action": "read map",
+            "reward": 0.0,
+            "next_observation": "The map reads:\n  The cubicle connects to the canteen.\n  The canteen connects to the parlor, office, side yard and cubicle.\n  The office connects to the canteen.\n  The parlor connects to the canteen.\n  The side yard connects to the canteen.\n",
+            "done": false
+          },
+          {
+            "observation": "The map reads:\n  The cubicle connects to the canteen.\n  The canteen connects to the parlor, office, side yard and cubicle.\n  The office connects to the canteen.\n  The parlor connects to the canteen.\n  The side yard connects to the canteen.\n",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move north",
+              "read map",
+              "task"
+            ],
+            "action": "read map",
+            "reward": 0.0,
+            "next_observation": "The map reads:\n  The cubicle connects to the canteen.\n  The canteen connects to the parlor, office, side yard and cubicle.\n  The office connects to the canteen.\n  The parlor connects to the canteen.\n  The side yard connects to the canteen.\n",
+            "done": false
+          },
+          {
+            "observation": "The map reads:\n  The cubicle connects to the canteen.\n  The canteen connects to the parlor, office, side yard and cubicle.\n  The office connects to the canteen.\n  The parlor connects to the canteen.\n  The side yard connects to the canteen.\n",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move north",
+              "read map",
+              "task"
+            ],
+            "action": "read map",
+            "reward": 0.0,
+            "next_observation": "The map reads:\n  The cubicle connects to the canteen.\n  The canteen connects to the parlor, office, side yard and cubicle.\n  The office connects to the canteen.\n  The parlor connects to the canteen.\n  The side yard connects to the canteen.\n",
+            "done": false
+          }
+        ]
+      },
+      "successful": {
+        "score": 1.0,
+        "steps": [
+          {
+            "observation": "You are in the office. In one part of the room you see a box, that is empty. \nTo the South you see the canteen. ",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move south",
+              "put map in box",
+              "read map",
+              "task"
+            ],
+            "action": "look around",
+            "reward": 0.0,
+            "next_observation": "You are in the office. In one part of the room you see a box, that is empty. \nTo the South you see the canteen. ",
+            "done": false
+          },
+          {
+            "observation": "You are in the office. In one part of the room you see a box, that is empty. \nTo the South you see the canteen. ",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move south",
+              "put map in box",
+              "read map",
+              "task"
+            ],
+            "action": "task",
+            "reward": 0.0,
+            "next_observation": "Your task is to take the coin that is located in the canteen, and put it into the box found in the office. A map is provided, that you may find helpful.",
+            "done": false
+          },
+          {
+            "observation": "Your task is to take the coin that is located in the canteen, and put it into the box found in the office. A map is provided, that you may find helpful.",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move south",
+              "put map in box",
+              "read map",
+              "task"
+            ],
+            "action": "read map",
+            "reward": 0.0,
+            "next_observation": "The map reads:\n  The cubicle connects to the canteen.\n  The canteen connects to the parlor, office, side yard and cubicle.\n  The office connects to the canteen.\n  The parlor connects to the canteen.\n  The side yard connects to the canteen.\n",
+            "done": false
+          },
+          {
+            "observation": "The map reads:\n  The cubicle connects to the canteen.\n  The canteen connects to the parlor, office, side yard and cubicle.\n  The office connects to the canteen.\n  The parlor connects to the canteen.\n  The side yard connects to the canteen.\n",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move south",
+              "put map in box",
+              "read map",
+              "task"
+            ],
+            "action": "move south",
+            "reward": 0.0,
+            "next_observation": "You are in the canteen. In one part of the room you see a coin. \nTo the North you see the office. To the South you see the side yard. To the East you see the parlor. To the West you see the cubicle. ",
+            "done": false
+          },
+          {
+            "observation": "You are in the canteen. In one part of the room you see a coin. \nTo the North you see the office. To the South you see the side yard. To the East you see the parlor. To the West you see the cubicle. ",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move east",
+              "move north",
+              "move south",
+              "move west",
+              "read map",
+              "take coin",
+              "task"
+            ],
+            "action": "take coin",
+            "reward": 0.5,
+            "next_observation": "You take the coin.",
+            "done": false
+          },
+          {
+            "observation": "You take the coin.",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move east",
+              "move north",
+              "move south",
+              "move west",
+              "read map",
+              "task"
+            ],
+            "action": "move north",
+            "reward": 0.0,
+            "next_observation": "You are in the office. In one part of the room you see a box, that is empty. \nTo the South you see the canteen. ",
+            "done": false
+          },
+          {
+            "observation": "You are in the office. In one part of the room you see a box, that is empty. \nTo the South you see the canteen. ",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "move south",
+              "put coin in box",
+              "put map in box",
+              "read map",
+              "task"
+            ],
+            "action": "put coin in box",
+            "reward": 0.5,
+            "next_observation": "You put the coin in the box.",
+            "done": true
+          }
+        ]
+      }
+    },
+    {
+      "game": "twc",
+      "seed": 0,
+      "objective": "Put every misplaced household object in its canonical container.",
+      "failed": {
+        "score": 0.0,
+        "steps": [
+          {
+            "observation": "You are in the bedroom. In one part of the room you see a dressing table, that has nothing on it. There is also a desk chair, that has nothing on it. You also see a desk, that has nothing on it. In another part of the room you see a chest of drawers that is closed. In one part of the room you see a wardrobe that is closed. There is also a night stand, that has nothing on it. You also see a bed, that has nothing on it. In another part of the room you see a clean brown shirt. In one part of the room you see a clean blue T-shirt. \n",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "open chest of drawers",
+              "open wardrobe",
+              "take clean blue T-shirt",
+              "take clean brown shirt"
+            ],
+            "action": "take clean blue T-shirt",
+            "reward": 0.25,
+            "next_observation": "You take the clean blue T-shirt.",
+            "done": false
+          },
+          {
+            "observation": "You take the clean blue T-shirt.",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "open chest of drawers",
+              "open wardrobe",
+              "put clean blue T-shirt in bed",
+              "put clean blue T-shirt in desk",
+              "put clean blue T-shirt in desk chair",
+              "put clean blue T-shirt in dressing table",
+              "put clean blue T-shirt in night stand",
+              "take clean brown shirt"
+            ],
+            "action": "open chest of drawers",
+            "reward": 0.0,
+            "next_observation": "You open the chest of drawers. It's empty inside.",
+            "done": false
+          },
+          {
+            "observation": "You open the chest of drawers. It's empty inside.",
+            "valid_actions": [
+              "close chest of drawers",
+              "inventory",
+              "look around",
+              "open wardrobe",
+              "put clean blue T-shirt in bed",
+              "put clean blue T-shirt in chest of drawers",
+              "put clean blue T-shirt in desk",
+              "put clean blue T-shirt in desk chair",
+              "put clean blue T-shirt in dressing table",
+              "put clean blue T-shirt in night stand",
+              "take clean brown shirt"
+            ],
+            "action": "open wardrobe",
+            "reward": 0.0,
+            "next_observation": "You open the wardrobe. It's empty inside.",
+            "done": false
+          },
+          {
+            "observation": "You open the wardrobe. It's empty inside.",
+            "valid_actions": [
+              "close chest of drawers",
+              "close wardrobe",
+              "inventory",
+              "look around",
+              "put clean blue T-shirt in bed",
+              "put clean blue T-shirt in chest of drawers",
+              "put clean blue T-shirt in desk",
+              "put clean blue T-shirt in desk chair",
+              "put clean blue T-shirt in dressing table",
+              "put clean blue T-shirt in night stand",
+              "put clean blue T-shirt in wardrobe",
+              "take clean brown shirt"
+            ],
+            "action": "close chest of drawers",
+            "reward": 0.0,
+            "next_observation": "You close the chest of drawers.",
+            "done": false
+          },
+          {
+            "observation": "You close the chest of drawers.",
+            "valid_actions": [
+              "close wardrobe",
+              "inventory",
+              "look around",
+              "open chest of drawers",
+              "put clean blue T-shirt in bed",
+              "put clean blue T-shirt in desk",
+              "put clean blue T-shirt in desk chair",
+              "put clean blue T-shirt in dressing table",
+              "put clean blue T-shirt in night stand",
+              "put clean blue T-shirt in wardrobe",
+              "take clean brown shirt"
+            ],
+            "action": "close wardrobe",
+            "reward": 0.0,
+            "next_observation": "You close the wardrobe.",
+            "done": false
+          },
+          {
+            "observation": "You close the wardrobe.",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "open chest of drawers",
+              "open wardrobe",
+              "put clean blue T-shirt in bed",
+              "put clean blue T-shirt in desk",
+              "put clean blue T-shirt in desk chair",
+              "put clean blue T-shirt in dressing table",
+              "put clean blue T-shirt in night stand",
+              "take clean brown shirt"
+            ],
+            "action": "put clean blue T-shirt in desk chair",
+            "reward": -0.25,
+            "next_observation": "You put the clean blue T-shirt in the desk chair.",
+            "done": false
+          }
+        ]
+      },
+      "successful": {
+        "score": 1.0,
+        "steps": [
+          {
+            "observation": "You are in the bedroom. In one part of the room you see a dressing table, that has nothing on it. There is also a desk chair, that has nothing on it. You also see a desk, that has nothing on it. In another part of the room you see a chest of drawers that is closed. In one part of the room you see a wardrobe that is closed. There is also a night stand, that has nothing on it. You also see a bed, that has nothing on it. In another part of the room you see a clean brown shirt. In one part of the room you see a clean blue T-shirt. \n",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "open chest of drawers",
+              "open wardrobe",
+              "take clean blue T-shirt",
+              "take clean brown shirt"
+            ],
+            "action": "look around",
+            "reward": 0.0,
+            "next_observation": "You are in the bedroom. In one part of the room you see a dressing table, that has nothing on it. There is also a desk chair, that has nothing on it. You also see a desk, that has nothing on it. In another part of the room you see a chest of drawers that is closed. In one part of the room you see a wardrobe that is closed. There is also a night stand, that has nothing on it. You also see a bed, that has nothing on it. In another part of the room you see a clean brown shirt. In one part of the room you see a clean blue T-shirt. \n",
+            "done": false
+          },
+          {
+            "observation": "You are in the bedroom. In one part of the room you see a dressing table, that has nothing on it. There is also a desk chair, that has nothing on it. You also see a desk, that has nothing on it. In another part of the room you see a chest of drawers that is closed. In one part of the room you see a wardrobe that is closed. There is also a night stand, that has nothing on it. You also see a bed, that has nothing on it. In another part of the room you see a clean brown shirt. In one part of the room you see a clean blue T-shirt. \n",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "open chest of drawers",
+              "open wardrobe",
+              "take clean blue T-shirt",
+              "take clean brown shirt"
+            ],
+            "action": "take clean brown shirt",
+            "reward": 0.25,
+            "next_observation": "You take the clean brown shirt.",
+            "done": false
+          },
+          {
+            "observation": "You take the clean brown shirt.",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "open chest of drawers",
+              "open wardrobe",
+              "put clean brown shirt in bed",
+              "put clean brown shirt in desk",
+              "put clean brown shirt in desk chair",
+              "put clean brown shirt in dressing table",
+              "put clean brown shirt in night stand",
+              "take clean blue T-shirt"
+            ],
+            "action": "take clean blue T-shirt",
+            "reward": 0.25,
+            "next_observation": "You take the clean blue T-shirt.",
+            "done": false
+          },
+          {
+            "observation": "You take the clean blue T-shirt.",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "open chest of drawers",
+              "open wardrobe",
+              "put clean blue T-shirt in bed",
+              "put clean blue T-shirt in desk",
+              "put clean blue T-shirt in desk chair",
+              "put clean blue T-shirt in dressing table",
+              "put clean blue T-shirt in night stand",
+              "put clean brown shirt in bed",
+              "put clean brown shirt in desk",
+              "put clean brown shirt in desk chair",
+              "put clean brown shirt in dressing table",
+              "put clean brown shirt in night stand"
+            ],
+            "action": "open wardrobe",
+            "reward": 0.0,
+            "next_observation": "You open the wardrobe. It's empty inside.",
+            "done": false
+          },
+          {
+            "observation": "You open the wardrobe. It's empty inside.",
+            "valid_actions": [
+              "close wardrobe",
+              "inventory",
+              "look around",
+              "open chest of drawers",
+              "put clean blue T-shirt in bed",
+              "put clean blue T-shirt in desk",
+              "put clean blue T-shirt in desk chair",
+              "put clean blue T-shirt in dressing table",
+              "put clean blue T-shirt in night stand",
+              "put clean blue T-shirt in wardrobe",
+              "put clean brown shirt in bed",
+              "put clean brown shirt in desk",
+              "put clean brown shirt in desk chair",
+              "put clean brown shirt in dressing table",
+              "put clean brown shirt in night stand",
+              "put clean brown shirt in wardrobe"
+            ],
+            "action": "put clean brown shirt in wardrobe",
+            "reward": 0.25,
+            "next_observation": "You put the clean brown shirt in the wardrobe.",
+            "done": false
+          },
+          {
+            "observation": "You put the clean brown shirt in the wardrobe.",
+            "valid_actions": [
+              "close wardrobe",
+              "inventory",
+              "look around",
+              "open chest of drawers",
+              "put clean blue T-shirt in bed",
+              "put clean blue T-shirt in desk",
+              "put clean blue T-shirt in desk chair",
+              "put clean blue T-shirt in dressing table",
+              "put clean blue T-shirt in night stand",
+              "put clean blue T-shirt in wardrobe",
+              "take clean brown shirt"
+            ],
+            "action": "put clean blue T-shirt in wardrobe",
+            "reward": 0.25,
+            "next_observation": "You put the clean blue T-shirt in the wardrobe.",
+            "done": true
+          }
+        ]
+      }
+    },
+    {
+      "game": "twc",
+      "seed": 1,
+      "objective": "Put every misplaced household object in its canonical container.",
+      "failed": {
+        "score": 0.5,
+        "steps": [
+          {
+            "observation": "You are in the bedroom. In one part of the room you see a dressing table, that has nothing on it. There is also a desk chair, that has nothing on it. You also see a desk, that has nothing on it. In another part of the room you see a chest of drawers that is closed. In one part of the room you see a wardrobe that is closed. There is also a night stand, that has nothing on it. You also see a bed, that has nothing on it. In another part of the room you see a black blanket. In one part of the room you see a long coat. \n",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "open chest of drawers",
+              "open wardrobe",
+              "take black blanket",
+              "take long coat"
+            ],
+            "action": "take black blanket",
+            "reward": 0.25,
+            "next_observation": "You take the black blanket.",
+            "done": false
+          },
+          {
+            "observation": "You take the black blanket.",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "open chest of drawers",
+              "open wardrobe",
+              "put black blanket in bed",
+              "put black blanket in desk",
+              "put black blanket in desk chair",
+              "put black blanket in dressing table",
+              "put black blanket in night stand",
+              "take long coat"
+            ],
+            "action": "open wardrobe",
+            "reward": 0.0,
+            "next_observation": "You open the wardrobe. It's empty inside.",
+            "done": false
+          },
+          {
+            "observation": "You open the wardrobe. It's empty inside.",
+            "valid_actions": [
+              "close wardrobe",
+              "inventory",
+              "look around",
+              "open chest of drawers",
+              "put black blanket in bed",
+              "put black blanket in desk",
+              "put black blanket in desk chair",
+              "put black blanket in dressing table",
+              "put black blanket in night stand",
+              "put black blanket in wardrobe",
+              "take long coat"
+            ],
+            "action": "open chest of drawers",
+            "reward": 0.0,
+            "next_observation": "You open the chest of drawers. It's empty inside.",
+            "done": false
+          },
+          {
+            "observation": "You open the chest of drawers. It's empty inside.",
+            "valid_actions": [
+              "close chest of drawers",
+              "close wardrobe",
+              "inventory",
+              "look around",
+              "put black blanket in bed",
+              "put black blanket in chest of drawers",
+              "put black blanket in desk",
+              "put black blanket in desk chair",
+              "put black blanket in dressing table",
+              "put black blanket in night stand",
+              "put black blanket in wardrobe",
+              "take long coat"
+            ],
+            "action": "put black blanket in dressing table",
+            "reward": -0.25,
+            "next_observation": "You put the black blanket in the dressing table.",
+            "done": false
+          },
+          {
+            "observation": "You put the black blanket in the dressing table.",
+            "valid_actions": [
+              "close chest of drawers",
+              "close wardrobe",
+              "inventory",
+              "look around",
+              "take black blanket",
+              "take long coat"
+            ],
+            "action": "take long coat",
+            "reward": 0.25,
+            "next_observation": "You take the long coat.",
+            "done": false
+          },
+          {
+            "observation": "You take the long coat.",
+            "valid_actions": [
+              "close chest of drawers",
+              "close wardrobe",
+              "inventory",
+              "look around",
+              "put long coat in bed",
+              "put long coat in chest of drawers",
+              "put long coat in desk",
+              "put long coat in desk chair",
+              "put long coat in dressing table",
+              "put long coat in night stand",
+              "put long coat in wardrobe",
+              "take black blanket"
+            ],
+            "action": "close wardrobe",
+            "reward": 0.0,
+            "next_observation": "You close the wardrobe.",
+            "done": false
+          },
+          {
+            "observation": "You close the wardrobe.",
+            "valid_actions": [
+              "close chest of drawers",
+              "inventory",
+              "look around",
+              "open wardrobe",
+              "put long coat in bed",
+              "put long coat in chest of drawers",
+              "put long coat in desk",
+              "put long coat in desk chair",
+              "put long coat in dressing table",
+              "put long coat in night stand",
+              "take black blanket"
+            ],
+            "action": "take black blanket",
+            "reward": 0.25,
+            "next_observation": "You take the black blanket.",
+            "done": false
+          }
+        ]
+      },
+      "successful": {
+        "score": 1.0,
+        "steps": [
+          {
+            "observation": "You are in the bedroom. In one part of the room you see a dressing table, that has nothing on it. There is also a desk chair, that has nothing on it. You also see a desk, that has nothing on it. In another part of the room you see a chest of drawers that is closed. In one part of the room you see a wardrobe that is closed. There is also a night stand, that has nothing on it. You also see a bed, that has nothing on it. In another part of the room you see a black blanket. In one part of the room you see a long coat. \n",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "open chest of drawers",
+              "open wardrobe",
+              "take black blanket",
+              "take long coat"
+            ],
+            "action": "look around",
+            "reward": 0.0,
+            "next_observation": "You are in the bedroom. In one part of the room you see a dressing table, that has nothing on it. There is also a desk chair, that has nothing on it. You also see a desk, that has nothing on it. In another part of the room you see a chest of drawers that is closed. In one part of the room you see a wardrobe that is closed. There is also a night stand, that has nothing on it. You also see a bed, that has nothing on it. In another part of the room you see a black blanket. In one part of the room you see a long coat. \n",
+            "done": false
+          },
+          {
+            "observation": "You are in the bedroom. In one part of the room you see a dressing table, that has nothing on it. There is also a desk chair, that has nothing on it. You also see a desk, that has nothing on it. In another part of the room you see a chest of drawers that is closed. In one part of the room you see a wardrobe that is closed. There is also a night stand, that has nothing on it. You also see a bed, that has nothing on it. In another part of the room you see a black blanket. In one part of the room you see a long coat. \n",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "open chest of drawers",
+              "open wardrobe",
+              "take black blanket",
+              "take long coat"
+            ],
+            "action": "take black blanket",
+            "reward": 0.25,
+            "next_observation": "You take the black blanket.",
+            "done": false
+          },
+          {
+            "observation": "You take the black blanket.",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "open chest of drawers",
+              "open wardrobe",
+              "put black blanket in bed",
+              "put black blanket in desk",
+              "put black blanket in desk chair",
+              "put black blanket in dressing table",
+              "put black blanket in night stand",
+              "take long coat"
+            ],
+            "action": "take long coat",
+            "reward": 0.25,
+            "next_observation": "You take the long coat.",
+            "done": false
+          },
+          {
+            "observation": "You take the long coat.",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "open chest of drawers",
+              "open wardrobe",
+              "put black blanket in bed",
+              "put black blanket in desk",
+              "put black blanket in desk chair",
+              "put black blanket in dressing table",
+              "put black blanket in night stand",
+              "put long coat in bed",
+              "put long coat in desk",
+              "put long coat in desk chair",
+              "put long coat in dressing table",
+              "put long coat in night stand"
+            ],
+            "action": "open chest of drawers",
+            "reward": 0.0,
+            "next_observation": "You open the chest of drawers. It's empty inside.",
+            "done": false
+          },
+          {
+            "observation": "You open the chest of drawers. It's empty inside.",
+            "valid_actions": [
+              "close chest of drawers",
+              "inventory",
+              "look around",
+              "open wardrobe",
+              "put black blanket in bed",
+              "put black blanket in chest of drawers",
+              "put black blanket in desk",
+              "put black blanket in desk chair",
+              "put black blanket in dressing table",
+              "put black blanket in night stand",
+              "put long coat in bed",
+              "put long coat in chest of drawers",
+              "put long coat in desk",
+              "put long coat in desk chair",
+              "put long coat in dressing table",
+              "put long coat in night stand"
+            ],
+            "action": "put black blanket in chest of drawers",
+            "reward": 0.25,
+            "next_observation": "You put the black blanket in the chest of drawers.",
+            "done": false
+          },
+          {
+            "observation": "You put the black blanket in the chest of drawers.",
+            "valid_actions": [
+              "close chest of drawers",
+              "inventory",
+              "look around",
+              "open wardrobe",
+              "put long coat in bed",
+              "put long coat in chest of drawers",
+              "put long coat in desk",
+              "put long coat in desk chair",
+              "put long coat in dressing table",
+              "put long coat in night stand",
+              "take black blanket"
+            ],
+            "action": "open wardrobe",
+            "reward": 0.0,
+            "next_observation": "You open the wardrobe. It's empty inside.",
+            "done": false
+          },
+          {
+            "observation": "You open the wardrobe. It's empty inside.",
+            "valid_actions": [
+              "close chest of drawers",
+              "close wardrobe",
+              "inventory",
+              "look around",
+              "put long coat in bed",
+              "put long coat in chest of drawers",
+              "put long coat in desk",
+              "put long coat in desk chair",
+              "put long coat in dressing table",
+              "put long coat in night stand",
+              "put long coat in wardrobe",
+              "take black blanket"
+            ],
+            "action": "put long coat in wardrobe",
+            "reward": 0.25,
+            "next_observation": "You put the long coat in the wardrobe.",
+            "done": true
+          }
+        ]
+      }
+    },
+    {
+      "game": "twc",
+      "seed": 2,
+      "objective": "Put every misplaced household object in its canonical container.",
+      "failed": {
+        "score": 0.25,
+        "steps": [
+          {
+            "observation": "You are in the pantry. In one part of the room you see a folding chair, that has nothing on it. There is also a shelf, that has nothing on it. You also see a flour. In another part of the room you see a yellow onion. \n",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "take flour",
+              "take yellow onion"
+            ],
+            "action": "take yellow onion",
+            "reward": 0.25,
+            "next_observation": "You take the yellow onion.",
+            "done": false
+          },
+          {
+            "observation": "You take the yellow onion.",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "put yellow onion in folding chair",
+              "put yellow onion in shelf",
+              "take flour"
+            ],
+            "action": "put yellow onion in folding chair",
+            "reward": -0.25,
+            "next_observation": "You put the yellow onion in the folding chair.",
+            "done": false
+          },
+          {
+            "observation": "You put the yellow onion in the folding chair.",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "take flour",
+              "take yellow onion"
+            ],
+            "action": "take flour",
+            "reward": 0.25,
+            "next_observation": "You take the flour.",
+            "done": false
+          },
+          {
+            "observation": "You take the flour.",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "put flour in folding chair",
+              "put flour in shelf",
+              "take yellow onion"
+            ],
+            "action": "put flour in folding chair",
+            "reward": -0.25,
+            "next_observation": "You put the flour in the folding chair.",
+            "done": false
+          },
+          {
+            "observation": "You put the flour in the folding chair.",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "take flour",
+              "take yellow onion"
+            ],
+            "action": "take yellow onion",
+            "reward": 0.25,
+            "next_observation": "You take the yellow onion.",
+            "done": false
+          }
+        ]
+      },
+      "successful": {
+        "score": 1.0,
+        "steps": [
+          {
+            "observation": "You are in the pantry. In one part of the room you see a folding chair, that has nothing on it. There is also a shelf, that has nothing on it. You also see a flour. In another part of the room you see a yellow onion. \n",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "take flour",
+              "take yellow onion"
+            ],
+            "action": "look around",
+            "reward": 0.0,
+            "next_observation": "You are in the pantry. In one part of the room you see a folding chair, that has nothing on it. There is also a shelf, that has nothing on it. You also see a flour. In another part of the room you see a yellow onion. \n",
+            "done": false
+          },
+          {
+            "observation": "You are in the pantry. In one part of the room you see a folding chair, that has nothing on it. There is also a shelf, that has nothing on it. You also see a flour. In another part of the room you see a yellow onion. \n",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "take flour",
+              "take yellow onion"
+            ],
+            "action": "take flour",
+            "reward": 0.25,
+            "next_observation": "You take the flour.",
+            "done": false
+          },
+          {
+            "observation": "You take the flour.",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "put flour in folding chair",
+              "put flour in shelf",
+              "take yellow onion"
+            ],
+            "action": "take yellow onion",
+            "reward": 0.25,
+            "next_observation": "You take the yellow onion.",
+            "done": false
+          },
+          {
+            "observation": "You take the yellow onion.",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "put flour in folding chair",
+              "put flour in shelf",
+              "put yellow onion in folding chair",
+              "put yellow onion in shelf"
+            ],
+            "action": "put flour in shelf",
+            "reward": 0.25,
+            "next_observation": "You put the flour in the shelf.",
+            "done": false
+          },
+          {
+            "observation": "You put the flour in the shelf.",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "put yellow onion in folding chair",
+              "put yellow onion in shelf",
+              "take flour"
+            ],
+            "action": "put yellow onion in shelf",
+            "reward": 0.25,
+            "next_observation": "You put the yellow onion in the shelf.",
+            "done": true
+          }
+        ]
+      }
+    },
+    {
+      "game": "twc",
+      "seed": 3,
+      "objective": "Put every misplaced household object in its canonical container.",
+      "failed": {
+        "score": 0.25,
+        "steps": [
+          {
+            "observation": "You are in the laundry room. In one part of the room you see a bench, that has nothing on it. There is also a work table, that has nothing on it. You also see a clothes drier that is closed. In another part of the room you see a laundry basket, that has nothing on it. In one part of the room you see a washing machine that is closed. There is also a dirty teal dress. You also see a dirty green T-shirt. \n",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "open clothes drier",
+              "open washing machine",
+              "take dirty green T-shirt",
+              "take dirty teal dress"
+            ],
+            "action": "open washing machine",
+            "reward": 0.0,
+            "next_observation": "You open the washing machine. It's empty inside.",
+            "done": false
+          },
+          {
+            "observation": "You open the washing machine. It's empty inside.",
+            "valid_actions": [
+              "close washing machine",
+              "inventory",
+              "look around",
+              "open clothes drier",
+              "take dirty green T-shirt",
+              "take dirty teal dress"
+            ],
+            "action": "close washing machine",
+            "reward": 0.0,
+            "next_observation": "You close the washing machine.",
+            "done": false
+          },
+          {
+            "observation": "You close the washing machine.",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "open clothes drier",
+              "open washing machine",
+              "take dirty green T-shirt",
+              "take dirty teal dress"
+            ],
+            "action": "open washing machine",
+            "reward": 0.0,
+            "next_observation": "You open the washing machine. It's empty inside.",
+            "done": false
+          },
+          {
+            "observation": "You open the washing machine. It's empty inside.",
+            "valid_actions": [
+              "close washing machine",
+              "inventory",
+              "look around",
+              "open clothes drier",
+              "take dirty green T-shirt",
+              "take dirty teal dress"
+            ],
+            "action": "open clothes drier",
+            "reward": 0.0,
+            "next_observation": "You open the clothes drier. It's empty inside.",
+            "done": false
+          },
+          {
+            "observation": "You open the clothes drier. It's empty inside.",
+            "valid_actions": [
+              "close clothes drier",
+              "close washing machine",
+              "inventory",
+              "look around",
+              "take dirty green T-shirt",
+              "take dirty teal dress"
+            ],
+            "action": "take dirty teal dress",
+            "reward": 0.25,
+            "next_observation": "You take the dirty teal dress.",
+            "done": false
+          }
+        ]
+      },
+      "successful": {
+        "score": 1.0,
+        "steps": [
+          {
+            "observation": "You are in the laundry room. In one part of the room you see a bench, that has nothing on it. There is also a work table, that has nothing on it. You also see a clothes drier that is closed. In another part of the room you see a laundry basket, that has nothing on it. In one part of the room you see a washing machine that is closed. There is also a dirty teal dress. You also see a dirty green T-shirt. \n",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "open clothes drier",
+              "open washing machine",
+              "take dirty green T-shirt",
+              "take dirty teal dress"
+            ],
+            "action": "look around",
+            "reward": 0.0,
+            "next_observation": "You are in the laundry room. In one part of the room you see a bench, that has nothing on it. There is also a work table, that has nothing on it. You also see a clothes drier that is closed. In another part of the room you see a laundry basket, that has nothing on it. In one part of the room you see a washing machine that is closed. There is also a dirty teal dress. You also see a dirty green T-shirt. \n",
+            "done": false
+          },
+          {
+            "observation": "You are in the laundry room. In one part of the room you see a bench, that has nothing on it. There is also a work table, that has nothing on it. You also see a clothes drier that is closed. In another part of the room you see a laundry basket, that has nothing on it. In one part of the room you see a washing machine that is closed. There is also a dirty teal dress. You also see a dirty green T-shirt. \n",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "open clothes drier",
+              "open washing machine",
+              "take dirty green T-shirt",
+              "take dirty teal dress"
+            ],
+            "action": "take dirty teal dress",
+            "reward": 0.25,
+            "next_observation": "You take the dirty teal dress.",
+            "done": false
+          },
+          {
+            "observation": "You take the dirty teal dress.",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "open clothes drier",
+              "open washing machine",
+              "put dirty teal dress in bench",
+              "put dirty teal dress in laundry basket",
+              "put dirty teal dress in work table",
+              "take dirty green T-shirt"
+            ],
+            "action": "take dirty green T-shirt",
+            "reward": 0.25,
+            "next_observation": "You take the dirty green T-shirt.",
+            "done": false
+          },
+          {
+            "observation": "You take the dirty green T-shirt.",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "open clothes drier",
+              "open washing machine",
+              "put dirty green T-shirt in bench",
+              "put dirty green T-shirt in laundry basket",
+              "put dirty green T-shirt in work table",
+              "put dirty teal dress in bench",
+              "put dirty teal dress in laundry basket",
+              "put dirty teal dress in work table"
+            ],
+            "action": "put dirty teal dress in laundry basket",
+            "reward": 0.25,
+            "next_observation": "You put the dirty teal dress in the laundry basket.",
+            "done": false
+          },
+          {
+            "observation": "You put the dirty teal dress in the laundry basket.",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "open clothes drier",
+              "open washing machine",
+              "put dirty green T-shirt in bench",
+              "put dirty green T-shirt in laundry basket",
+              "put dirty green T-shirt in work table",
+              "take dirty teal dress"
+            ],
+            "action": "put dirty green T-shirt in laundry basket",
+            "reward": 0.25,
+            "next_observation": "You put the dirty green T-shirt in the laundry basket.",
+            "done": true
+          }
+        ]
+      }
+    },
+    {
+      "game": "twc",
+      "seed": 4,
+      "objective": "Put every misplaced household object in its canonical container.",
+      "failed": {
+        "score": 0.0,
+        "steps": [
+          {
+            "observation": "You are in the corridor. In one part of the room you see a key holder, that has nothing on it. There is also a shoe cabinet that is closed. You also see a umbrella stand, that has nothing on it. In another part of the room you see a hat rack, that has nothing on it. In one part of the room you see a coat hanger, that has nothing on it. There is also a white coat. You also see a beret. \n",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "open shoe cabinet",
+              "take beret",
+              "take white coat"
+            ],
+            "action": "take white coat",
+            "reward": 0.25,
+            "next_observation": "You take the white coat.",
+            "done": false
+          },
+          {
+            "observation": "You take the white coat.",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "open shoe cabinet",
+              "put white coat in coat hanger",
+              "put white coat in hat rack",
+              "put white coat in key holder",
+              "put white coat in umbrella stand",
+              "take beret"
+            ],
+            "action": "put white coat in key holder",
+            "reward": -0.25,
+            "next_observation": "You put the white coat in the key holder.",
+            "done": false
+          },
+          {
+            "observation": "You put the white coat in the key holder.",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "open shoe cabinet",
+              "take beret",
+              "take white coat"
+            ],
+            "action": "open shoe cabinet",
+            "reward": 0.0,
+            "next_observation": "You open the shoe cabinet. It's empty inside.",
+            "done": false
+          },
+          {
+            "observation": "You open the shoe cabinet. It's empty inside.",
+            "valid_actions": [
+              "close shoe cabinet",
+              "inventory",
+              "look around",
+              "take beret",
+              "take white coat"
+            ],
+            "action": "take white coat",
+            "reward": 0.25,
+            "next_observation": "You take the white coat.",
+            "done": false
+          },
+          {
+            "observation": "You take the white coat.",
+            "valid_actions": [
+              "close shoe cabinet",
+              "inventory",
+              "look around",
+              "put white coat in coat hanger",
+              "put white coat in hat rack",
+              "put white coat in key holder",
+              "put white coat in shoe cabinet",
+              "put white coat in umbrella stand",
+              "take beret"
+            ],
+            "action": "put white coat in shoe cabinet",
+            "reward": -0.25,
+            "next_observation": "You put the white coat in the shoe cabinet.",
+            "done": false
+          }
+        ]
+      },
+      "successful": {
+        "score": 1.0,
+        "steps": [
+          {
+            "observation": "You are in the corridor. In one part of the room you see a key holder, that has nothing on it. There is also a shoe cabinet that is closed. You also see a umbrella stand, that has nothing on it. In another part of the room you see a hat rack, that has nothing on it. In one part of the room you see a coat hanger, that has nothing on it. There is also a white coat. You also see a beret. \n",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "open shoe cabinet",
+              "take beret",
+              "take white coat"
+            ],
+            "action": "look around",
+            "reward": 0.0,
+            "next_observation": "You are in the corridor. In one part of the room you see a key holder, that has nothing on it. There is also a shoe cabinet that is closed. You also see a umbrella stand, that has nothing on it. In another part of the room you see a hat rack, that has nothing on it. In one part of the room you see a coat hanger, that has nothing on it. There is also a white coat. You also see a beret. \n",
+            "done": false
+          },
+          {
+            "observation": "You are in the corridor. In one part of the room you see a key holder, that has nothing on it. There is also a shoe cabinet that is closed. You also see a umbrella stand, that has nothing on it. In another part of the room you see a hat rack, that has nothing on it. In one part of the room you see a coat hanger, that has nothing on it. There is also a white coat. You also see a beret. \n",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "open shoe cabinet",
+              "take beret",
+              "take white coat"
+            ],
+            "action": "take white coat",
+            "reward": 0.25,
+            "next_observation": "You take the white coat.",
+            "done": false
+          },
+          {
+            "observation": "You take the white coat.",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "open shoe cabinet",
+              "put white coat in coat hanger",
+              "put white coat in hat rack",
+              "put white coat in key holder",
+              "put white coat in umbrella stand",
+              "take beret"
+            ],
+            "action": "take beret",
+            "reward": 0.25,
+            "next_observation": "You take the beret.",
+            "done": false
+          },
+          {
+            "observation": "You take the beret.",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "open shoe cabinet",
+              "put beret in coat hanger",
+              "put beret in hat rack",
+              "put beret in key holder",
+              "put beret in umbrella stand",
+              "put white coat in coat hanger",
+              "put white coat in hat rack",
+              "put white coat in key holder",
+              "put white coat in umbrella stand"
+            ],
+            "action": "put white coat in coat hanger",
+            "reward": 0.25,
+            "next_observation": "You put the white coat in the coat hanger.",
+            "done": false
+          },
+          {
+            "observation": "You put the white coat in the coat hanger.",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "open shoe cabinet",
+              "put beret in coat hanger",
+              "put beret in hat rack",
+              "put beret in key holder",
+              "put beret in umbrella stand",
+              "take white coat"
+            ],
+            "action": "put beret in hat rack",
+            "reward": 0.25,
+            "next_observation": "You put the beret in the hat rack.",
+            "done": true
+          }
+        ]
+      }
+    },
+    {
+      "game": "twc",
+      "seed": 5,
+      "objective": "Put every misplaced household object in its canonical container.",
+      "failed": {
+        "score": 0.0,
+        "steps": [
+          {
+            "observation": "You are in the kitchen. In one part of the room you see a stove. There is also an oven. You also see a fridge that is closed. In another part of the room you see a counter, that has nothing on it. In one part of the room you see a kitchen cupboard that is closed. There is also a cutlery drawer that is closed. You also see a trash can that is closed. In another part of the room you see a dishwasher that is closed. In one part of the room you see a dining chair, that has nothing on it. There is also a chopping board. You also see an used tissue. \n",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "open cutlery drawer",
+              "open dishwasher",
+              "open fridge",
+              "open kitchen cupboard",
+              "open trash can",
+              "take chopping board",
+              "take used tissue"
+            ],
+            "action": "take used tissue",
+            "reward": 0.25,
+            "next_observation": "You take the used tissue.",
+            "done": false
+          },
+          {
+            "observation": "You take the used tissue.",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "open cutlery drawer",
+              "open dishwasher",
+              "open fridge",
+              "open kitchen cupboard",
+              "open trash can",
+              "put used tissue in counter",
+              "put used tissue in dining chair",
+              "take chopping board"
+            ],
+            "action": "put used tissue in dining chair",
+            "reward": -0.25,
+            "next_observation": "You put the used tissue in the dining chair.",
+            "done": false
+          },
+          {
+            "observation": "You put the used tissue in the dining chair.",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "open cutlery drawer",
+              "open dishwasher",
+              "open fridge",
+              "open kitchen cupboard",
+              "open trash can",
+              "take chopping board",
+              "take used tissue"
+            ],
+            "action": "open trash can",
+            "reward": 0.0,
+            "next_observation": "You open the trash can. It's empty inside.",
+            "done": false
+          },
+          {
+            "observation": "You open the trash can. It's empty inside.",
+            "valid_actions": [
+              "close trash can",
+              "inventory",
+              "look around",
+              "open cutlery drawer",
+              "open dishwasher",
+              "open fridge",
+              "open kitchen cupboard",
+              "take chopping board",
+              "take used tissue"
+            ],
+            "action": "take chopping board",
+            "reward": 0.25,
+            "next_observation": "You take the chopping board.",
+            "done": false
+          },
+          {
+            "observation": "You take the chopping board.",
+            "valid_actions": [
+              "close trash can",
+              "inventory",
+              "look around",
+              "open cutlery drawer",
+              "open dishwasher",
+              "open fridge",
+              "open kitchen cupboard",
+              "put chopping board in counter",
+              "put chopping board in dining chair",
+              "put chopping board in trash can",
+              "take used tissue"
+            ],
+            "action": "put chopping board in trash can",
+            "reward": -0.25,
+            "next_observation": "You put the chopping board in the trash can.",
+            "done": false
+          },
+          {
+            "observation": "You put the chopping board in the trash can.",
+            "valid_actions": [
+              "close trash can",
+              "inventory",
+              "look around",
+              "open cutlery drawer",
+              "open dishwasher",
+              "open fridge",
+              "open kitchen cupboard",
+              "take chopping board",
+              "take used tissue"
+            ],
+            "action": "close trash can",
+            "reward": 0.0,
+            "next_observation": "You close the trash can.",
+            "done": false
+          }
+        ]
+      },
+      "successful": {
+        "score": 1.0,
+        "steps": [
+          {
+            "observation": "You are in the kitchen. In one part of the room you see a stove. There is also an oven. You also see a fridge that is closed. In another part of the room you see a counter, that has nothing on it. In one part of the room you see a kitchen cupboard that is closed. There is also a cutlery drawer that is closed. You also see a trash can that is closed. In another part of the room you see a dishwasher that is closed. In one part of the room you see a dining chair, that has nothing on it. There is also a chopping board. You also see an used tissue. \n",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "open cutlery drawer",
+              "open dishwasher",
+              "open fridge",
+              "open kitchen cupboard",
+              "open trash can",
+              "take chopping board",
+              "take used tissue"
+            ],
+            "action": "look around",
+            "reward": 0.0,
+            "next_observation": "You are in the kitchen. In one part of the room you see a stove. There is also an oven. You also see a fridge that is closed. In another part of the room you see a counter, that has nothing on it. In one part of the room you see a kitchen cupboard that is closed. There is also a cutlery drawer that is closed. You also see a trash can that is closed. In another part of the room you see a dishwasher that is closed. In one part of the room you see a dining chair, that has nothing on it. There is also a chopping board. You also see an used tissue. \n",
+            "done": false
+          },
+          {
+            "observation": "You are in the kitchen. In one part of the room you see a stove. There is also an oven. You also see a fridge that is closed. In another part of the room you see a counter, that has nothing on it. In one part of the room you see a kitchen cupboard that is closed. There is also a cutlery drawer that is closed. You also see a trash can that is closed. In another part of the room you see a dishwasher that is closed. In one part of the room you see a dining chair, that has nothing on it. There is also a chopping board. You also see an used tissue. \n",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "open cutlery drawer",
+              "open dishwasher",
+              "open fridge",
+              "open kitchen cupboard",
+              "open trash can",
+              "take chopping board",
+              "take used tissue"
+            ],
+            "action": "take chopping board",
+            "reward": 0.25,
+            "next_observation": "You take the chopping board.",
+            "done": false
+          },
+          {
+            "observation": "You take the chopping board.",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "open cutlery drawer",
+              "open dishwasher",
+              "open fridge",
+              "open kitchen cupboard",
+              "open trash can",
+              "put chopping board in counter",
+              "put chopping board in dining chair",
+              "take used tissue"
+            ],
+            "action": "take used tissue",
+            "reward": 0.25,
+            "next_observation": "You take the used tissue.",
+            "done": false
+          },
+          {
+            "observation": "You take the used tissue.",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "open cutlery drawer",
+              "open dishwasher",
+              "open fridge",
+              "open kitchen cupboard",
+              "open trash can",
+              "put chopping board in counter",
+              "put chopping board in dining chair",
+              "put used tissue in counter",
+              "put used tissue in dining chair"
+            ],
+            "action": "put chopping board in counter",
+            "reward": 0.25,
+            "next_observation": "You put the chopping board in the counter.",
+            "done": false
+          },
+          {
+            "observation": "You put the chopping board in the counter.",
+            "valid_actions": [
+              "inventory",
+              "look around",
+              "open cutlery drawer",
+              "open dishwasher",
+              "open fridge",
+              "open kitchen cupboard",
+              "open trash can",
+              "put used tissue in counter",
+              "put used tissue in dining chair",
+              "take chopping board"
+            ],
+            "action": "open trash can",
+            "reward": 0.0,
+            "next_observation": "You open the trash can. It's empty inside.",
+            "done": false
+          },
+          {
+            "observation": "You open the trash can. It's empty inside.",
+            "valid_actions": [
+              "close trash can",
+              "inventory",
+              "look around",
+              "open cutlery drawer",
+              "open dishwasher",
+              "open fridge",
+              "open kitchen cupboard",
+              "put used tissue in counter",
+              "put used tissue in dining chair",
+              "put used tissue in trash can",
+              "take chopping board"
+            ],
+            "action": "put used tissue in trash can",
+            "reward": 0.25,
+            "next_observation": "You put the used tissue in the trash can.",
+            "done": true
+          }
+        ]
+      }
+    }
+  ],
+  "environment_interactions": 196,
+  "sha256": "0907bc8e3ee60412128915f260b56772a2a59d2e22922e332ec77a8519203254"
+}

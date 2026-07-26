@@ -1,12 +1,13 @@
 {
-  "method": "collect",
+  "method": "packed_epd",
   "model": "Qwen/Qwen2.5-0.5B-Instruct",
   "train_seeds": [0, 1, 2, 3, 4, 5],
   "eval_seeds": [100, 101, 102, 103, 104, 105, 106, 107],
+  "eval_fold": "train",
   "replicates": [0, 1, 2, 3],
   "games": {
     "coin": "numLocations=5,numDistractorItems=0,includeDoors=0,limitInventorySize=0",
-    "mapreader": "numLocations=5,maxDistanceApart=3,maxDistractorItemsPerLocation=0,includeDoors=0,limitInventorySize=0",
+    "mapreader": "numLocations=5,maxDistanceApart=2,maxDistractorItemsPerLocation=0,includeDoors=0,limitInventorySize=0",
     "twc": "numLocations=1,numItemsToPutAway=2,includeDoors=0,limitInventorySize=0"
   },
   "max_steps": 18,
