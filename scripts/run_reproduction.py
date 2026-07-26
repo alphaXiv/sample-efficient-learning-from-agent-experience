@@ -323,8 +323,8 @@ def encode_packed(tokenizer, examples):
     for ex in examples:
         grouped.setdefault(ex["episode"], []).append(ex)
     for episode_examples in grouped.values():
+        current_ids, current_labels, decisions = [], [], 0
         for offset in range(0, len(episode_examples), CONFIG["pack_size"]):
-            ids, labels = [], []
             for ex in episode_examples[offset : offset + CONFIG["pack_size"]]:
                 segment = (
                     f"\nObservation and available-action decision:\n{ex['prompt']}\nAction: "
@@ -333,14 +333,22 @@ def encode_packed(tokenizer, examples):
                 target = tokenizer(
                     ex["target"] + tokenizer.eos_token, add_special_tokens=False
                 )["input_ids"]
-                ids.extend(prefix + target)
-                labels.extend([-100] * len(prefix) + target)
-            rows.append(
-                {
-                    "input_ids": ids[-CONFIG["max_length"] :],
-                    "labels": labels[-CONFIG["max_length"] :],
-                }
-            )
+                segment_ids = prefix + target
+                segment_labels = [-100] * len(prefix) + target
+                if len(segment_ids) > CONFIG["max_length"]:
+                    segment_ids = segment_ids[-CONFIG["max_length"] :]
+                    segment_labels = segment_labels[-CONFIG["max_length"] :]
+                if current_ids and (
+                    len(current_ids) + len(segment_ids) > CONFIG["max_length"]
+                    or decisions >= CONFIG["pack_size"]
+                ):
+                    rows.append({"input_ids": current_ids, "labels": current_labels})
+                    current_ids, current_labels, decisions = [], [], 0
+                current_ids.extend(segment_ids)
+                current_labels.extend(segment_labels)
+                decisions += 1
+        if current_ids:
+            rows.append({"input_ids": current_ids, "labels": current_labels})
     return rows
 
 
@@ -390,7 +398,7 @@ def train_adapter(model_name, examples, packed, out_dir, seed):
             task_type="CAUSAL_LM",
         ),
     )
-    loader = DataLoader(Rows(), batch_size=2 if packed else 8, shuffle=True, collate_fn=collate)
+    loader = DataLoader(Rows(), batch_size=8, shuffle=True, collate_fn=collate)
     optimizer = torch.optim.AdamW(model.parameters(), lr=CONFIG["learning_rate"])
     model.train()
     losses = []
