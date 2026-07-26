@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="500" viewBox="0 0 920 500" role="img" aria-labelledby="title desc">
+<title id="title">Experience targets retained the context gain</title><desc id="desc">Zero-shot = 0%; experience in context = 100%. Error bars show sample SD (n=4).</desc>
+<rect width="100%" height="100%" fill="#fbfaf7"/>
+<style>text{font-family:Inter,ui-sans-serif,system-ui,sans-serif;fill:#202124}.small{font-size:13px}.label{font-size:15px}.title{font-size:22px;font-weight:700}.value{font-size:14px;font-weight:700}</style>
+<text x="90" y="36" class="title">Experience targets retained the context gain</text>
+<text x="90" y="61" class="small">Zero-shot = 0%; experience in context = 100%. Error bars show sample SD (n=4).</text>
+<text transform="translate(22 237.5) rotate(-90)" class="label">Retained in-context gain (%)</text>
+<line x1="90" y1="390.0" x2="790" y2="390.0" stroke="#d8d6cf" stroke-width="1"/>
+<text x="78" y="395.0" text-anchor="end" class="small">-50</text>
+<line x1="90" y1="329.0" x2="790" y2="329.0" stroke="#d8d6cf" stroke-width="1"/>
+<text x="78" y="334.0" text-anchor="end" class="small">0</text>
+<line x1="90" y1="268.0" x2="790" y2="268.0" stroke="#d8d6cf" stroke-width="1"/>
+<text x="78" y="273.0" text-anchor="end" class="small">50</text>
+<line x1="90" y1="207.0" x2="790" y2="207.0" stroke="#d8d6cf" stroke-width="1"/>
+<text x="78" y="212.0" text-anchor="end" class="small">100</text>
+<line x1="90" y1="146.0" x2="790" y2="146.0" stroke="#d8d6cf" stroke-width="1"/>
+<text x="78" y="151.0" text-anchor="end" class="small">150</text>
+<line x1="90" y1="85.0" x2="790" y2="85.0" stroke="#d8d6cf" stroke-width="1"/>
+<text x="78" y="90.0" text-anchor="end" class="small">200</text>
+<rect x="133.5" y="166.7" width="88.0" height="162.3" rx="5" fill="#e9a23b"/>
+<line x1="177.5" y1="119.0" x2="177.5" y2="214.5" stroke="#202124" stroke-width="2"/>
+<line x1="170.5" y1="119.0" x2="184.5" y2="119.0" stroke="#202124" stroke-width="2"/>
+<line x1="170.5" y1="214.5" x2="184.5" y2="214.5" stroke="#202124" stroke-width="2"/>
+<text x="177.5" y="156.7" text-anchor="middle" class="value">133.0</text>
+<text x="177.5" y="416.0" text-anchor="middle" class="small">Direct SFT</text>
+<rect x="308.5" y="196.0" width="88.0" height="133.0" rx="5" fill="#2a9d8f"/>
+<line x1="352.5" y1="191.3" x2="352.5" y2="200.7" stroke="#202124" stroke-width="2"/>
+<line x1="345.5" y1="191.3" x2="359.5" y2="191.3" stroke="#202124" stroke-width="2"/>
+<line x1="345.5" y1="200.7" x2="359.5" y2="200.7" stroke="#202124" stroke-width="2"/>
+<text x="352.5" y="186.0" text-anchor="middle" class="value">109.0</text>
+<text x="352.5" y="416.0" text-anchor="middle" class="small">Unpacked</text>
+<rect x="483.5" y="219.2" width="88.0" height="109.8" rx="5" fill="#7768ae"/>
+<line x1="527.5" y1="202.5" x2="527.5" y2="235.9" stroke="#202124" stroke-width="2"/>
+<line x1="520.5" y1="202.5" x2="534.5" y2="202.5" stroke="#202124" stroke-width="2"/>
+<line x1="520.5" y1="235.9" x2="534.5" y2="235.9" stroke="#202124" stroke-width="2"/>
+<text x="527.5" y="209.2" text-anchor="middle" class="value">90.0</text>
+<text x="527.5" y="416.0" text-anchor="middle" class="small">Packed</text>
+<rect x="658.5" y="329.0" width="88.0" height="25.6" rx="5" fill="#d65f5f"/>
+<line x1="702.5" y1="340.6" x2="702.5" y2="368.6" stroke="#202124" stroke-width="2"/>
+<line x1="695.5" y1="340.6" x2="709.5" y2="340.6" stroke="#202124" stroke-width="2"/>
+<line x1="695.5" y1="368.6" x2="709.5" y2="368.6" stroke="#202124" stroke-width="2"/>
+<text x="702.5" y="374.6" text-anchor="middle" class="value">-21.0</text>
+<text x="702.5" y="416.0" text-anchor="middle" class="small">No experience</text></svg>

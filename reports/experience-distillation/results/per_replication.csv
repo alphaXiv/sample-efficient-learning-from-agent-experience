@@ -1,0 +1,17 @@
+condition,replicate,normalized_score,retained_icl_gain_pct
+Direct SFT,0,37.5000,96.0
+Direct SFT,1,45.8333,128.0
+Direct SFT,2,61.4583,188.0
+Direct SFT,3,43.7500,120.0
+Unpacked one-step distillation,0,39.5833,104.0
+Unpacked one-step distillation,1,41.6667,112.0
+Unpacked one-step distillation,2,41.6667,112.0
+Unpacked one-step distillation,3,40.6250,108.0
+Lossless packed distillation,0,37.5000,96.0
+Lossless packed distillation,1,31.2500,72.0
+Lossless packed distillation,2,39.5833,104.0
+Lossless packed distillation,3,35.4167,88.0
+No-experience teacher,0,6.2500,-24.0
+No-experience teacher,1,5.2083,-28.0
+No-experience teacher,2,11.4583,-4.0
+No-experience teacher,3,5.2083,-28.0
