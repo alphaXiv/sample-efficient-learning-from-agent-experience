@@ -1,0 +1,4 @@
+condition,training_instances,training_steps,supervised_tokens,target_seconds,train_seconds
+unpacked_epd,196,125,790,3.426879,8.473829
+naive_packed_epd,41,105,567,3.406593,6.242887
+lossless_packed_epd,71,45,790,3.418798,6.391169
