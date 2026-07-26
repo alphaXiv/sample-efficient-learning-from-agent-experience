@@ -41,22 +41,34 @@ def objective(game: str) -> str:
 def load_env(game: str):
     from textworld_express import TextWorldExpressEnv
 
-    env = TextWorldExpressEnv(envStepLimit=CONFIG["max_steps"])
-    # textworld-express 1.0.0 exposes load's arguments positionally even
-    # though its README shows keyword use.
-    env.load(game, CONFIG["games"][game])
+    # PyPI 1.0.0 exposes the original dictionary API and starts one Java
+    # gateway per environment. Give every process/game a distinct port.
+    replicate = int(os.environ.get("ORX_REPLICATE", "9"))
+    game_index = list(CONFIG["games"]).index(game)
+    env = TextWorldExpressEnv(
+        envStepLimit=CONFIG["max_steps"], threadNum=replicate * 10 + game_index
+    )
+    env.load(game, "train", 0, CONFIG["games"][game], False)
     return env
 
 
+def reset_env(env, seed, fold, generate_gold=False):
+    state = env.resetWithSeed(seed, fold, generate_gold)
+    return state["observation"], state
+
+
 def rollout_actions(env, actions):
-    obs, infos = env.reset(seed=env._orx_seed, gameFold="train", generateGoldPath=True)
+    obs, infos = reset_env(env, env._orx_seed, "train", True)
     trajectory = []
     total = 0.0
     for action in actions[: CONFIG["max_steps"]]:
         valid = sorted(infos["validActions"])
         if action not in valid:
             break
-        next_obs, reward, done, next_infos = env.step(action)
+        next_infos = env.step(action)
+        next_obs = next_infos["observation"]
+        reward = float(next_infos["reward"])
+        done = bool(next_infos["tasksuccess"] or next_infos["taskfailure"])
         total += float(reward)
         trajectory.append(
             {
@@ -82,7 +94,7 @@ def collect_frozen() -> dict:
         env = load_env(game)
         for seed in CONFIG["train_seeds"]:
             env._orx_seed = seed
-            obs, infos = env.reset(seed=seed, gameFold="train", generateGoldPath=True)
+            obs, infos = reset_env(env, seed, "train", True)
             gold = list(env.getGoldActionSequence())
 
             # A bounded failed/exploratory attempt: prefer a valid action that differs
@@ -99,7 +111,9 @@ def collect_frozen() -> dict:
                 ]
                 action = rng.choice(preferred or valid)
                 explore.append(action)
-                obs, _, done, infos = env.step(action)
+                infos = env.step(action)
+                obs = infos["observation"]
+                done = bool(infos["tasksuccess"] or infos["taskfailure"])
                 if done:
                     break
             failed_traj, failed_score = rollout_actions(env, explore)
@@ -114,7 +128,7 @@ def collect_frozen() -> dict:
                     "successful": {"score": success_score, "steps": success_traj},
                 }
             )
-        env.close()
+        env.shutdown()
     frozen = {
         "benchmark": "TextWorldExpress 1.0.0",
         "fold": "train",
@@ -410,13 +424,16 @@ def evaluate(policy, frozen, with_experience, replicate):
         game_scores = []
         guide = experience_guide(frozen, game, True) if with_experience else None
         for seed in CONFIG["eval_seeds"]:
-            obs, infos = env.reset(seed=seed, gameFold="test", generateGoldPath=False)
+            obs, infos = reset_env(env, seed, "test", False)
             history, total = [], 0.0
             for _ in range(CONFIG["max_steps"]):
                 valid = sorted(infos["validActions"])
                 prompt = prompt_for(game, obs, valid, history, guide)
                 action = policy.choose(prompt, valid)
-                next_obs, reward, done, infos = env.step(action)
+                infos = env.step(action)
+                next_obs = infos["observation"]
+                reward = float(infos["reward"])
+                done = bool(infos["tasksuccess"] or infos["taskfailure"])
                 interaction_count += 1
                 total += float(reward)
                 history.append(f"{short_obs(obs, 90)} -> {action}")
@@ -425,7 +442,7 @@ def evaluate(policy, frozen, with_experience, replicate):
                     break
             # TextWorldExpress games in this suite have max total reward 1.
             game_scores.append(100.0 * min(1.0, max(0.0, total)))
-        env.close()
+        env.shutdown()
         per_game[game] = float(np.mean(game_scores))
         scores.extend(game_scores)
     return {
@@ -438,6 +455,7 @@ def evaluate(policy, frozen, with_experience, replicate):
 
 def run_replicate(rep, frozen_path):
     os.environ["CUDA_VISIBLE_DEVICES"] = str(rep)
+    os.environ["ORX_REPLICATE"] = str(rep)
     started = time.perf_counter()
     method = CONFIG["method"]
     frozen = json.loads(Path(frozen_path).read_text())
