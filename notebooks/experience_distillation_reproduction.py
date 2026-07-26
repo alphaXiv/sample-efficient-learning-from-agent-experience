@@ -97,7 +97,7 @@ def _(mo):
     - **Isolation:** teacher targets were produced from frozen text with zero additional
       environment interactions.
     - **Compute:** Kubernetes, NVIDIA RTX PRO 6000 Blackwell, 16 GPUs peak concurrent,
-      0.45 elapsed wall-hours through the final scientific result.
+      0.341342 elapsed wall-hours through the final scientific result.
 
     Frozen trajectory SHA-256:
     `0907bc8e3ee60412128915f260b56772a2a59d2e22922e332ec77a8519203254`.

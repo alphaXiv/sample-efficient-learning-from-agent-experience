@@ -173,7 +173,7 @@ def _(mo):
     30.6% of the time, while direct SFT could learn directly from successful gold paths.
 
     **Compute:** Kubernetes; NVIDIA RTX PRO 6000 Blackwell; four GPUs per job;
-    16 GPUs peak concurrent; 0.44 hours campaign wall time.
+    16 GPUs peak concurrent; 0.341342 hours campaign wall time.
     """)
     return
 

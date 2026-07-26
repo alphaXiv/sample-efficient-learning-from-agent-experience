@@ -51,7 +51,7 @@ Halving the learning rate left direct SFT ahead (45.57 vs 40.89). Expanding the 
 | Packing improves efficiency | 128 vs 4,096 instances; >10× time | 71 vs 196; 1.33× training speed | Qualitatively aligned, smaller magnitude |
 | Remove teacher experience | Gain erased | –21% retained gain | Aligned |
 
-Kubernetes was used throughout on NVIDIA RTX PRO 6000 Blackwell GPUs. Each job allocated four GPUs, peak concurrent allocation was 16 GPUs, and the fresh campaign took 0.44 elapsed wall hours from first launch to last completion, including setup diagnostics. Full reproduction still needs TaleSuite assets, the paper’s in-house checkpoint and prompts, longer training, and more seeds.
+Kubernetes was used throughout on NVIDIA RTX PRO 6000 Blackwell GPUs. Each job allocated four GPUs, peak concurrent allocation was 16 GPUs, and the fresh campaign took 0.341342 elapsed wall hours from first launch to last scientific completion, including setup diagnostics. Full reproduction still needs TaleSuite assets, the paper’s in-house checkpoint and prompts, longer training, and more seeds.
 
 [![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/alphaXiv/sample-efficient-learning-from-agent-experience/blob/main/notebooks/experience_distillation.py)
 
