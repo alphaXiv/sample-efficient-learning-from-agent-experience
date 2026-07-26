@@ -6,7 +6,7 @@ Language agents often improve when their previous attempts remain visible, but t
 
 **Partially reproduced on the substituted public setup.** Experience-conditioned one-step targets transferred a large gain and the no-experience control erased it, supporting the proposed mechanism. However, direct supervised fine-tuning (SFT) scored **47.14** versus **40.89** for unpacked distillation, reversing the paper’s central ordering; lossless packing reduced work and was statistically compatible with unpacked performance at four seeds, but its mean was lower.
 
-Scope: TextWorldExpress 1.1.0 rather than TaleSuite, three games rather than six, Qwen2.5-0.5B-Instruct rather than an undisclosed in-house model, and LoRA adapters. All results ran on Kubernetes with NVIDIA RTX PRO 6000 Blackwell GPUs, peaking at 16 concurrent GPUs. The compute campaign took **0.45 wall-hours** from the fresh-attempt cutoff to the final scientific result.
+Scope: TextWorldExpress 1.1.0 rather than TaleSuite, three games rather than six, Qwen2.5-0.5B-Instruct rather than an undisclosed in-house model, and LoRA adapters. All results ran on Kubernetes with NVIDIA RTX PRO 6000 Blackwell GPUs, peaking at 16 concurrent GPUs. The compute campaign took **0.341342 wall-hours** from the fresh-attempt cutoff to the final scientific result.
 
 ![Normalized score by method](images/headline_scores.png)
 

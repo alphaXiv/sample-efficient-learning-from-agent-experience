@@ -8,7 +8,7 @@ Lossless branch packing reduced 196 examples / 125 optimization steps to 71 / 45
 
 [![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/alphaXiv/sample-efficient-learning-from-agent-experience/blob/main/notebooks/experience_distillation_reproduction.py)
 
-Compute: Kubernetes; NVIDIA RTX PRO 6000 Blackwell; 16 GPUs peak concurrent; 0.45 elapsed wall-hours from the fresh-attempt cutoff to the final scientific result.
+Compute: Kubernetes; NVIDIA RTX PRO 6000 Blackwell; 16 GPUs peak concurrent; 0.341342 elapsed wall-hours from the fresh-attempt cutoff to the final scientific result.
 
 ## Headline results
 
