@@ -160,7 +160,7 @@ def experience_guide(frozen: dict, game: str, include_details: bool = True) -> s
             if action not in patterns and not action.startswith(("look", "inventory")):
                 patterns.append(action)
     if patterns:
-        lines.append("Observed successful action patterns: " + "; ".join(patterns[:10]))
+        lines.append("Observed successful action patterns: " + "; ".join(patterns))
     return "\n".join(lines)
 
 
