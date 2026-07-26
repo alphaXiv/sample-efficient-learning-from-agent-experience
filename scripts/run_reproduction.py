@@ -47,7 +47,9 @@ def load_env(game: str):
 
 
 def rollout_actions(env, actions):
-    obs, infos = env.reset(seed=env._orx_seed, gameFold="train", generateGoldPath=True)
+    obs, infos = env.reset(
+        seed=env._orx_seed, gameFold="train", generateGoldPath=True
+    )
     trajectory = []
     total = 0.0
     for action in actions[: CONFIG["max_steps"]]:
@@ -80,7 +82,9 @@ def collect_frozen() -> dict:
         env = load_env(game)
         for seed in CONFIG["train_seeds"]:
             env._orx_seed = seed
-            obs, infos = env.reset(seed=seed, gameFold="train", generateGoldPath=True)
+            obs, infos = env.reset(
+                seed=seed, gameFold="train", generateGoldPath=True
+            )
             gold = list(env.getGoldActionSequence())
 
             # A bounded failed/exploratory attempt: prefer a valid action that differs
@@ -114,7 +118,7 @@ def collect_frozen() -> dict:
             )
         env.close()
     frozen = {
-        "benchmark": "TextWorldExpress 1.0.0",
+        "benchmark": "TextWorldExpress 1.1.0",
         "fold": "train",
         "games": CONFIG["games"],
         "train_seeds": CONFIG["train_seeds"],
@@ -129,17 +133,34 @@ def experience_guide(frozen: dict, game: str, include_details: bool = True) -> s
     if not include_details:
         return "No interaction experience is available. Decide from the current observation alone."
     episodes = [e for e in frozen["episodes"] if e["game"] == game]
-    lines = [
-        "Lessons compressed from earlier attempts in this same benchmark game.",
-        "Failed actions are explicitly marked; successful decisions should be imitated.",
-    ]
+    rules = {
+        "coin": [
+            "Take the coin immediately whenever a valid 'take coin' action appears.",
+            "Otherwise move to a room not visited in the recent history; do not bounce between two rooms.",
+            "Movement is useful exploration; inventory/look actions are only fallbacks.",
+        ],
+        "mapreader": [
+            "Read the map in the observation and follow its directional links toward the named coin room.",
+            "Take the coin as soon as it is available.",
+            "After taking it, reverse the route to the starting room and put the coin in the box.",
+        ],
+        "twc": [
+            "Take each misplaced object, then put it in the household container that normally stores it.",
+            "Prefer a valid 'put OBJECT in CONTAINER' action matching common sense over wandering or looking.",
+            "Complete one object placement before working on the next.",
+        ],
+    }
+    lines = ["Compressed lessons from successful earlier attempts:", *rules[game]]
+    # Keep only a handful of distinct successful action patterns. This is the
+    # preprocessing/abstraction step, not a raw trajectory dump.
+    patterns = []
     for ep in episodes:
-        lines.append(f"TRAIN SEED {ep['seed']}: failed attempt score={ep['failed']['score']:.2f}")
-        for step in ep["failed"]["steps"][:3]:
-            lines.append(f"  FAILED: {short_obs(step['observation'])} -> {step['action']}")
-        lines.append(f"TRAIN SEED {ep['seed']}: successful attempt score={ep['successful']['score']:.2f}")
         for step in ep["successful"]["steps"]:
-            lines.append(f"  SUCCESS: {short_obs(step['observation'])} -> {step['action']}")
+            action = step["action"]
+            if action not in patterns and not action.startswith(("look", "inventory")):
+                patterns.append(action)
+    if patterns:
+        lines.append("Observed successful action patterns: " + "; ".join(patterns[:10]))
     return "\n".join(lines)
 
 
@@ -302,8 +323,8 @@ def encode_packed(tokenizer, examples):
     for ex in examples:
         grouped.setdefault(ex["episode"], []).append(ex)
     for episode_examples in grouped.values():
+        current_ids, current_labels, decisions = [], [], 0
         for offset in range(0, len(episode_examples), CONFIG["pack_size"]):
-            ids, labels = [], []
             for ex in episode_examples[offset : offset + CONFIG["pack_size"]]:
                 segment = (
                     f"\nObservation and available-action decision:\n{ex['prompt']}\nAction: "
@@ -312,14 +333,22 @@ def encode_packed(tokenizer, examples):
                 target = tokenizer(
                     ex["target"] + tokenizer.eos_token, add_special_tokens=False
                 )["input_ids"]
-                ids.extend(prefix + target)
-                labels.extend([-100] * len(prefix) + target)
-            rows.append(
-                {
-                    "input_ids": ids[-CONFIG["max_length"] :],
-                    "labels": labels[-CONFIG["max_length"] :],
-                }
-            )
+                segment_ids = prefix + target
+                segment_labels = [-100] * len(prefix) + target
+                if len(segment_ids) > CONFIG["max_length"]:
+                    segment_ids = segment_ids[-CONFIG["max_length"] :]
+                    segment_labels = segment_labels[-CONFIG["max_length"] :]
+                if current_ids and (
+                    len(current_ids) + len(segment_ids) > CONFIG["max_length"]
+                    or decisions >= CONFIG["pack_size"]
+                ):
+                    rows.append({"input_ids": current_ids, "labels": current_labels})
+                    current_ids, current_labels, decisions = [], [], 0
+                current_ids.extend(segment_ids)
+                current_labels.extend(segment_labels)
+                decisions += 1
+        if current_ids:
+            rows.append({"input_ids": current_ids, "labels": current_labels})
     return rows
 
 
@@ -369,7 +398,7 @@ def train_adapter(model_name, examples, packed, out_dir, seed):
             task_type="CAUSAL_LM",
         ),
     )
-    loader = DataLoader(Rows(), batch_size=2 if packed else 8, shuffle=True, collate_fn=collate)
+    loader = DataLoader(Rows(), batch_size=8, shuffle=True, collate_fn=collate)
     optimizer = torch.optim.AdamW(model.parameters(), lr=CONFIG["learning_rate"])
     model.train()
     losses = []
@@ -408,7 +437,9 @@ def evaluate(policy, frozen, with_experience, replicate):
         game_scores = []
         guide = experience_guide(frozen, game, True) if with_experience else None
         for seed in CONFIG["eval_seeds"]:
-            obs, infos = env.reset(seed=seed, gameFold="test", generateGoldPath=False)
+            obs, infos = env.reset(
+                seed=seed, gameFold=CONFIG["eval_fold"], generateGoldPath=False
+            )
             history, total = [], 0.0
             for _ in range(CONFIG["max_steps"]):
                 valid = sorted(infos["validActions"])

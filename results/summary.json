@@ -1,0 +1,38 @@
+{
+  "paper": {
+    "zero_shot": 18.5,
+    "experience_in_context": 45.6,
+    "direct_sft": 17.8,
+    "experience_distillation": 43.8,
+    "direct_sft_retained_gain_pct": -2.6,
+    "experience_distillation_retained_gain_pct": 93.4
+  },
+  "observed": {
+    "zero_shot": 12.5,
+    "experience_in_context": 38.541667,
+    "direct_sft": 47.135417,
+    "direct_sft_retained_gain_pct": 133.0,
+    "unpacked_epd": 40.885417,
+    "unpacked_epd_retained_gain_pct": 109.0,
+    "lossless_packed_epd": 35.9375,
+    "lossless_packed_epd_retained_gain_pct": 90.0,
+    "no_experience_teacher": 7.03125,
+    "no_experience_retained_gain_pct": -21.0,
+    "full_mapping_unpacked_epd": 43.75,
+    "full_mapping_unpacked_retained_gain_pct": 125.0
+  },
+  "protocol": {
+    "benchmark": "TextWorldExpress 1.1.0",
+    "model": "Qwen/Qwen2.5-0.5B-Instruct",
+    "games": ["Coin Collector", "Map Reader", "TextWorld Commonsense"],
+    "train_seeds": [0, 1, 2, 3, 4, 5],
+    "held_out_seeds": [100, 101, 102, 103, 104, 105, 106, 107],
+    "replicates": 4,
+    "frozen_trajectory_sha256": "0907bc8e3ee60412128915f260b56772a2a59d2e22922e332ec77a8519203254",
+    "collection_environment_interactions": 196,
+    "target_generation_environment_interactions": 0,
+    "backend": "kubernetes",
+    "gpu_model": "NVIDIA RTX PRO 6000 Blackwell",
+    "peak_concurrent_gpus": 16
+  }
+}
