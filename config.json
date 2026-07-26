@@ -1,5 +1,5 @@
 {
-  "method": "collect",
+  "method": "packed_epd",
   "model": "Qwen/Qwen2.5-0.5B-Instruct",
   "train_seeds": [0, 1, 2, 3, 4, 5],
   "eval_seeds": [100, 101, 102, 103, 104, 105, 106, 107],
