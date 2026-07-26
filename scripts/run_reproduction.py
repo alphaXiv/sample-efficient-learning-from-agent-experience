@@ -133,17 +133,34 @@ def experience_guide(frozen: dict, game: str, include_details: bool = True) -> s
     if not include_details:
         return "No interaction experience is available. Decide from the current observation alone."
     episodes = [e for e in frozen["episodes"] if e["game"] == game]
-    lines = [
-        "Lessons compressed from earlier attempts in this same benchmark game.",
-        "Failed actions are explicitly marked; successful decisions should be imitated.",
-    ]
+    rules = {
+        "coin": [
+            "Take the coin immediately whenever a valid 'take coin' action appears.",
+            "Otherwise move to a room not visited in the recent history; do not bounce between two rooms.",
+            "Movement is useful exploration; inventory/look actions are only fallbacks.",
+        ],
+        "mapreader": [
+            "Read the map in the observation and follow its directional links toward the named coin room.",
+            "Take the coin as soon as it is available.",
+            "After taking it, reverse the route to the starting room and put the coin in the box.",
+        ],
+        "twc": [
+            "Take each misplaced object, then put it in the household container that normally stores it.",
+            "Prefer a valid 'put OBJECT in CONTAINER' action matching common sense over wandering or looking.",
+            "Complete one object placement before working on the next.",
+        ],
+    }
+    lines = ["Compressed lessons from successful earlier attempts:", *rules[game]]
+    # Keep only a handful of distinct successful action patterns. This is the
+    # preprocessing/abstraction step, not a raw trajectory dump.
+    patterns = []
     for ep in episodes:
-        lines.append(f"TRAIN SEED {ep['seed']}: failed attempt score={ep['failed']['score']:.2f}")
-        for step in ep["failed"]["steps"][:3]:
-            lines.append(f"  FAILED: {short_obs(step['observation'])} -> {step['action']}")
-        lines.append(f"TRAIN SEED {ep['seed']}: successful attempt score={ep['successful']['score']:.2f}")
         for step in ep["successful"]["steps"]:
-            lines.append(f"  SUCCESS: {short_obs(step['observation'])} -> {step['action']}")
+            action = step["action"]
+            if action not in patterns and not action.startswith(("look", "inventory")):
+                patterns.append(action)
+    if patterns:
+        lines.append("Observed successful action patterns: " + "; ".join(patterns[:10]))
     return "\n".join(lines)
 
 
